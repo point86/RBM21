@@ -1,0 +1,26 @@
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\Visualizzatore ingressi RBM21.exe.config
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\Visualizzatore ingressi RBM21.exe
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\Visualizzatore ingressi RBM21.pdb
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\System.Data.SQLite.dll
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\System.Data.SQLite.xml
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.Properties.Resources.resources
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.csproj.GenerateResource.Cache
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.csproj.CoreCompileInputs.cache
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.exe
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.pdb
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.SettingsForm.resources
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.StartForm.resources
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.ViewerForm.resources
+C:\Users\paolo\source\repos\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.csprojResolveAssemblyReference.cache
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.ViewerForm.resources
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.Properties.Resources.resources
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.SettingsForm.resources
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore_ingressi_RBM21.StartForm.resources
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.csproj.GenerateResource.Cache
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.csproj.CoreCompileInputs.cache
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\Visualizzatore ingressi RBM21.exe.config
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\Visualizzatore ingressi RBM21.exe
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\bin\x86\Debug\Visualizzatore ingressi RBM21.pdb
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.exe
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.pdb
+C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\Visualizzatore ingressi RBM21\obj\x86\Debug\Visualizzatore ingressi RBM21.csprojResolveAssemblyReference.cache
