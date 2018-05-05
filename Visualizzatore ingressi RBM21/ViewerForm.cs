@@ -101,9 +101,17 @@ namespace Visualizzatore_ingressi_RBM21
 
             //update userInfo to show info about the selected user
             ListView.SelectedListViewItemCollection lv = this.usersListView.SelectedItems;
-            userInfo.Text = lv[0].Tag.ToString();
+            userInfo.Text = lv[0].Tag.ToString(); //cast to User?
             
+
             User u = (User)lv[0].Tag;
+
+            entranceList.Items.Clear();
+            foreach (string l in u.Entrances ?? Enumerable.Empty<string>())
+            {
+                entranceList.Items.Add(new ListViewItem(l));
+            }
+            /*
             //query database
             List<string> entrances = dbm.GetEntrances(u.Key);
             //clear all data in entranceView
@@ -112,7 +120,7 @@ namespace Visualizzatore_ingressi_RBM21
             foreach (string l in entrances ?? Enumerable.Empty<string>())
             {
                 entranceList.Items.Add(new ListViewItem (l));
-            }            
+            } */           
         }
 
         private void listView1_SelectedIndexChanged(object sender, EventArgs e)

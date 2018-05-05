@@ -42,7 +42,7 @@ namespace RBM21_core
             usr.UserCode = (string)(reader["usercode"]);
             usr.Active = (long)(reader["active"]) == 1 ? true : false;
             string time = (string)reader["time"];
-            usr.Time = DateTime.Parse(time);
+            usr.Entrances = GetEntrances(usr.UserCode);
             usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
             return usr;
         }
@@ -64,8 +64,8 @@ namespace RBM21_core
                 usr.UserCode = (string)(reader["usercode"]);
                 usr.Active= (long)(reader["active"]) == 1 ? true : false;                
                 usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
-                string time = (string)reader["time"];
-                usr.Time = DateTime.Parse(time);
+                string time = (string)reader["time"];                
+                usr.Entrances = GetEntrances(usr.UserCode);
                 result.Add(usr);
             }
             return result;
@@ -103,7 +103,8 @@ namespace RBM21_core
 
         public List<string> GetEntrances(string usercode)
         {            
-            Debug.WriteLine("GetEntrances "+usercode); 
+            Debug.WriteLine("GetEntrances "+usercode);
+            //items are ordered  by time, descending order (example 2018-03-07 01:54:00):
             string sql = "select * from entrances where usercode = '" + usercode + "'  order by time desc;";            
           // string sql = "select * from entrances where usercode = '" + usercode + "'  order by date(time) DESC;";
 
@@ -155,7 +156,8 @@ namespace RBM21_core
                     usr.Active = (long)(reader["active"]) == 1 ? true : false;
                     usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
                     string time = (string)(reader["time"]);
-                    usr.Time = DateTime.Parse(time);
+                    usr.Entrances = GetEntrances(usr.UserCode);
+                    //usr.Time = DateTime.Parse(time);
 
                     result.Add(usr);
                 }
@@ -165,7 +167,7 @@ namespace RBM21_core
         //given User usr (identified by usr.usercode), update user associated.
         public int updateUser(User usr)
         {            
-            string cmd = string.Format("UPDATE users SET name = \"{0}\", key = \"{1}\", usercode = \"{2}\", active = {3}, time = \"{4}\", creditoresiduo = {5} WHERE usercode = \"{6}\";", usr.Nome, usr.Key, usr.UserCode, usr.Active?1:0, usr.Time.ToString("yyyy-MM-dd HH:mm:ss"), usr.CreditoResiduo, usr.UserCode);
+            string cmd = string.Format("UPDATE users SET name = \"{0}\", key = \"{1}\", usercode = \"{2}\", active = {3}, creditoresiduo = {4} WHERE usercode = \"{5}\";", usr.Nome, usr.Key, usr.UserCode, usr.Active?1:0, usr.CreditoResiduo, usr.UserCode);
             command = new SQLiteCommand(cmd, dbConnection);
             int rows = command.ExecuteNonQuery();
             Tools.LogMessageToFile(String.Format("DBmanager - updateUser \"{0}\":  {1}. {2} rows affected (database: {3}).", usr.UserCode, usr.ToString(), rows, path));
@@ -174,7 +176,7 @@ namespace RBM21_core
         }
         public int AddEntrance(User usr, DateTime date)
         {
-            string cmd = string.Format("insert into entrances (usercode, time) values (\"{0}\", \"{1}\")", usr.Key, date.ToString("yyyy-MM-dd HH:mm:ss"));
+            string cmd = string.Format("insert into entrances (usercode, time) values (\"{0}\", \"{1}\")", usr.UserCode, date.ToString("yyyy-MM-dd HH:mm:ss"));
             command = new SQLiteCommand(cmd, dbConnection);
             int rows = command.ExecuteNonQuery();
             Tools.LogMessageToFile(String.Format("DBmanager - AddEntrance \"{0}\" at {1}. {2} rows affected (database: {3}).", usr.UserCode, date.ToString(), rows, path));

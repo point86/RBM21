@@ -92,7 +92,7 @@ namespace RBM21_core
             s = Regex.Match(sr.ReadLine(), @"<..>(?<name>[\w ]+)").Groups["name"].Value;
             int day = Int32.Parse(s);
 
-            usr.Time = timeCalculator(day, minutes);
+            usr.Time = timeCalculator(day, minutes); //FIXME is useful????? DO I NEED IT???? I DON?T THINK!!!
 
             //usr.UserCode = usr.Key;// +usr.Nome; //FIXME
             usr.UserCode = usr.Key+usr.Nome;

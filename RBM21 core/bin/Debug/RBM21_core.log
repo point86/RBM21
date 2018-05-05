@@ -1537,3 +1537,251 @@ unrecognized token: "010FF094A4"
 [27/04/2018 01:55:24] DBmanager - AddEntrance "0600C475A4Utente 4" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
 [27/04/2018 01:55:24] DBmanager - updateUser "0600C475A4Utente 4":  Nome: Utente 4, Position(File): -1, Key: 0600C475A4, LastTime: 26/04/2018 23:18:00, Credito Residuo: 18, Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
 [27/04/2018 01:55:24] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:10:24] CoreForm --- START OPERATION ---
+[05/05/2018 01:10:24] CoreForm - SyncUsersTable(). CAME file: C:\\Users\\paolo\\Desktop\\cai.tsp, SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:10:24] DBmanager - CreateDatabase C:\\Users\\paolo\\Desktop\\cai.sqlite .
+[05/05/2018 01:10:24] DBmanager - AddUser "010FF094A4ADMINISTRATOR": Nome: ADMINISTRATOR, Position(File): 1, Key: 010FF094A4, Credito Residuo: 0, Usercode (interno): "010FF094A4ADMINISTRATOR", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "07001AB8A9Marco Perencina": Nome: Marco Perencina, Position(File): 2, Key: 07001AB8A9, Credito Residuo: 15, Usercode (interno): "07001AB8A9Marco Perencina", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F11F63Utente 3": Nome: Utente 3, Position(File): 3, Key: 0600F11F63, Credito Residuo: 1, Usercode (interno): "0600F11F63Utente 3", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600C475A4Utente 4": Nome: Utente 4, Position(File): 4, Key: 0600C475A4, Credito Residuo: 18, Usercode (interno): "0600C475A4Utente 4", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EE6E73Utente 5": Nome: Utente 5, Position(File): 5, Key: 0600EE6E73, Credito Residuo: 0, Usercode (interno): "0600EE6E73Utente 5", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EE4328Utente 6": Nome: Utente 6, Position(File): 6, Key: 0600EE4328, Credito Residuo: 0, Usercode (interno): "0600EE4328Utente 6", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EF5AC7Utente 7": Nome: Utente 7, Position(File): 7, Key: 0600EF5AC7, Credito Residuo: 10, Usercode (interno): "0600EF5AC7Utente 7", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "07000630FBUtente 8": Nome: Utente 8, Position(File): 8, Key: 07000630FB, Credito Residuo: 19, Usercode (interno): "07000630FBUtente 8", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600CC9E58Utente 9": Nome: Utente 9, Position(File): 9, Key: 0600CC9E58, Credito Residuo: 18, Usercode (interno): "0600CC9E58Utente 9", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F11EA2Utente 10": Nome: Utente 10, Position(File): 10, Key: 0600F11EA2, Credito Residuo: 0, Usercode (interno): "0600F11EA2Utente 10", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F0F2D3Utente 11": Nome: Utente 11, Position(File): 11, Key: 0600F0F2D3, Credito Residuo: 0, Usercode (interno): "0600F0F2D3Utente 11", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F16FE0Utente 12": Nome: Utente 12, Position(File): 12, Key: 0600F16FE0, Credito Residuo: 0, Usercode (interno): "0600F16FE0Utente 12", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EA8C20Utente 13": Nome: Utente 13, Position(File): 13, Key: 0600EA8C20, Credito Residuo: 0, Usercode (interno): "0600EA8C20Utente 13", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600E0FF48Utente 14": Nome: Utente 14, Position(File): 14, Key: 0600E0FF48, Credito Residuo: 13, Usercode (interno): "0600E0FF48Utente 14", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EA888CUtente 15": Nome: Utente 15, Position(File): 15, Key: 0600EA888C, Credito Residuo: 0, Usercode (interno): "0600EA888CUtente 15", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F587F6Utente 16": Nome: Utente 16, Position(File): 16, Key: 0600F587F6, Credito Residuo: 0, Usercode (interno): "0600F587F6Utente 16", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EEBE5AUtente 17e": Nome: Utente 17e, Position(File): 17, Key: 0600EEBE5A, Credito Residuo: 0, Usercode (interno): "0600EEBE5AUtente 17e", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EF4B38Utente 18": Nome: Utente 18, Position(File): 18, Key: 0600EF4B38, Credito Residuo: 0, Usercode (interno): "0600EF4B38Utente 18", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0700054CE9Utente 19": Nome: Utente 19, Position(File): 19, Key: 0700054CE9, Credito Residuo: 0, Usercode (interno): "0700054CE9Utente 19", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "070003555DUtente 20": Nome: Utente 20, Position(File): 20, Key: 070003555D, Credito Residuo: 0, Usercode (interno): "070003555DUtente 20", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EFA42DUtente 21": Nome: Utente 21, Position(File): 21, Key: 0600EFA42D, Credito Residuo: 0, Usercode (interno): "0600EFA42DUtente 21", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F1017DUtente 22": Nome: Utente 22, Position(File): 22, Key: 0600F1017D, Credito Residuo: 0, Usercode (interno): "0600F1017DUtente 22", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EFE73DUtente 23": Nome: Utente 23, Position(File): 23, Key: 0600EFE73D, Credito Residuo: 0, Usercode (interno): "0600EFE73DUtente 23", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F082ECUtente 24": Nome: Utente 24, Position(File): 24, Key: 0600F082EC, Credito Residuo: 0, Usercode (interno): "0600F082ECUtente 24", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F10CF6Utente 25": Nome: Utente 25, Position(File): 25, Key: 0600F10CF6, Credito Residuo: 0, Usercode (interno): "0600F10CF6Utente 25", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F04B26Utente 26": Nome: Utente 26, Position(File): 26, Key: 0600F04B26, Credito Residuo: 0, Usercode (interno): "0600F04B26Utente 26", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600EFF723Utente 27": Nome: Utente 27, Position(File): 27, Key: 0600EFF723, Credito Residuo: 0, Usercode (interno): "0600EFF723Utente 27", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F053EAUtente 28": Nome: Utente 28, Position(File): 28, Key: 0600F053EA, Credito Residuo: 0, Usercode (interno): "0600F053EAUtente 28", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600DF2258Utente 29": Nome: Utente 29, Position(File): 29, Key: 0600DF2258, Credito Residuo: 0, Usercode (interno): "0600DF2258Utente 29", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600F04E7BUtente 30": Nome: Utente 30, Position(File): 30, Key: 0600F04E7B, Credito Residuo: 0, Usercode (interno): "0600F04E7BUtente 30", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:24] DBmanager - AddUser "0600E81620Utente 31": Nome: Utente 31, Position(File): 31, Key: 0600E81620, Credito Residuo: 0, Usercode (interno): "0600E81620Utente 31", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600F4E73BUtente 32": Nome: Utente 32, Position(File): 32, Key: 0600F4E73B, Credito Residuo: 0, Usercode (interno): "0600F4E73BUtente 32", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "070005EBB5Utente 33": Nome: Utente 33, Position(File): 33, Key: 070005EBB5, Credito Residuo: 0, Usercode (interno): "070005EBB5Utente 33", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "06007CAD5CUtente 34": Nome: Utente 34, Position(File): 34, Key: 06007CAD5C, Credito Residuo: 0, Usercode (interno): "06007CAD5CUtente 34", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600EEB22DUtente 35": Nome: Utente 35, Position(File): 35, Key: 0600EEB22D, Credito Residuo: 0, Usercode (interno): "0600EEB22DUtente 35", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600EF2ADDUtente 36": Nome: Utente 36, Position(File): 36, Key: 0600EF2ADD, Credito Residuo: 0, Usercode (interno): "0600EF2ADDUtente 36", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0700159EF3Utente 37": Nome: Utente 37, Position(File): 37, Key: 0700159EF3, Credito Residuo: 0, Usercode (interno): "0700159EF3Utente 37", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600F100FDUtente 38": Nome: Utente 38, Position(File): 38, Key: 0600F100FD, Credito Residuo: 0, Usercode (interno): "0600F100FDUtente 38", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600F0F943Utente 39": Nome: Utente 39, Position(File): 39, Key: 0600F0F943, Credito Residuo: 0, Usercode (interno): "0600F0F943Utente 39", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600ED9C30Utente 40": Nome: Utente 40, Position(File): 40, Key: 0600ED9C30, Credito Residuo: 0, Usercode (interno): "0600ED9C30Utente 40", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600F0B731Utente 41": Nome: Utente 41, Position(File): 41, Key: 0600F0B731, Credito Residuo: 0, Usercode (interno): "0600F0B731Utente 41", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0700046F9EUtente 42": Nome: Utente 42, Position(File): 42, Key: 0700046F9E, Credito Residuo: 0, Usercode (interno): "0700046F9EUtente 42", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600ED3AC7Utente 43": Nome: Utente 43, Position(File): 43, Key: 0600ED3AC7, Credito Residuo: 0, Usercode (interno): "0600ED3AC7Utente 43", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600EFA16FUtente 44": Nome: Utente 44, Position(File): 44, Key: 0600EFA16F, Credito Residuo: 0, Usercode (interno): "0600EFA16FUtente 44", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600E98592Utente 45": Nome: Utente 45, Position(File): 45, Key: 0600E98592, Credito Residuo: 0, Usercode (interno): "0600E98592Utente 45", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600EFCAC1Utente 46": Nome: Utente 46, Position(File): 46, Key: 0600EFCAC1, Credito Residuo: 0, Usercode (interno): "0600EFCAC1Utente 46", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0700072899Utente 47": Nome: Utente 47, Position(File): 47, Key: 0700072899, Credito Residuo: 0, Usercode (interno): "0700072899Utente 47", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600EE73BCUtente 48": Nome: Utente 48, Position(File): 48, Key: 0600EE73BC, Credito Residuo: 0, Usercode (interno): "0600EE73BCUtente 48", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0600E80D8CUtente 49": Nome: Utente 49, Position(File): 49, Key: 0600E80D8C, Credito Residuo: 0, Usercode (interno): "0600E80D8CUtente 49", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "0700044327Utente 50": Nome: Utente 50, Position(File): 50, Key: 0700044327, Credito Residuo: 0, Usercode (interno): "0700044327Utente 50", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] DBmanager - AddUser "07001596F7Utente 51": Nome: Utente 51, Position(File): 51, Key: 07001596F7, Credito Residuo: 0, Usercode (interno): "07001596F7Utente 51", Active: True. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:10:25] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:33:51] CoreForm --- START OPERATION ---
+[05/05/2018 01:33:51] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:33:53] DBmanager - AddEntrance "010FF094A4ADMINISTRATOR" at 14/04/2018 18:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "07001AB8A9Marco Perencina" at 27/04/2018 00:42:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F11F63Utente 3" at 06/04/2018 21:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600C475A4Utente 4" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EE6E73Utente 5" at 12/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EE4328Utente 6" at 16/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EF5AC7Utente 7" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "07000630FBUtente 8" at 07/04/2018 00:46:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F11EA2Utente 10" at 12/04/2018 18:49:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F0F2D3Utente 11" at 12/04/2018 18:51:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F16FE0Utente 12" at 12/04/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EA8C20Utente 13" at 06/04/2018 22:08:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600E0FF48Utente 14" at 12/04/2018 18:52:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EA888CUtente 15" at 12/04/2018 18:53:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F587F6Utente 16" at 12/04/2018 19:06:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EEBE5AUtente 17e" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EF4B38Utente 18" at 12/04/2018 19:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0700054CE9Utente 19" at 12/04/2018 19:11:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "070003555DUtente 20" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EFA42DUtente 21" at 12/04/2018 19:14:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F1017DUtente 22" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EFE73DUtente 23" at 16/04/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F082ECUtente 24" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F10CF6Utente 25" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F04B26Utente 26" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EFF723Utente 27" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F053EAUtente 28" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600DF2258Utente 29" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F04E7BUtente 30" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600E81620Utente 31" at 06/04/2018 23:58:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F4E73BUtente 32" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "070005EBB5Utente 33" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "06007CAD5CUtente 34" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EEB22DUtente 35" at 01/05/2018 19:38:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EF2ADDUtente 36" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0700159EF3Utente 37" at 04/05/2018 15:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F100FDUtente 38" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F0F943Utente 39" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600ED9C30Utente 40" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600F0B731Utente 41" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0700046F9EUtente 42" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600ED3AC7Utente 43" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EFA16FUtente 44" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600E98592Utente 45" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:53] DBmanager - AddEntrance "0600EFCAC1Utente 46" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:54] DBmanager - AddEntrance "0700072899Utente 47" at 04/05/2018 16:24:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:54] DBmanager - AddEntrance "0600EE73BCUtente 48" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:54] DBmanager - AddEntrance "0600E80D8CUtente 49" at 12/04/2018 19:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:54] DBmanager - AddEntrance "0700044327Utente 50" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:54] DBmanager - AddEntrance "07001596F7Utente 51" at 12/04/2018 19:20:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:33:54] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:34:12] CoreForm --- START OPERATION ---
+[05/05/2018 01:34:12] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:34:15] DBmanager - AddEntrance "010FF094A4ADMINISTRATOR" at 14/04/2018 18:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "07001AB8A9Marco Perencina" at 27/04/2018 00:42:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F11F63Utente 3" at 06/04/2018 21:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600C475A4Utente 4" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EE6E73Utente 5" at 12/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EE4328Utente 6" at 16/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EF5AC7Utente 7" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "07000630FBUtente 8" at 07/04/2018 00:46:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F11EA2Utente 10" at 12/04/2018 18:49:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F0F2D3Utente 11" at 12/04/2018 18:51:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F16FE0Utente 12" at 12/04/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EA8C20Utente 13" at 06/04/2018 22:08:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600E0FF48Utente 14" at 12/04/2018 18:52:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EA888CUtente 15" at 12/04/2018 18:53:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F587F6Utente 16" at 12/04/2018 19:06:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EEBE5AUtente 17e" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EF4B38Utente 18" at 12/04/2018 19:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0700054CE9Utente 19" at 12/04/2018 19:11:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "070003555DUtente 20" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EFA42DUtente 21" at 12/04/2018 19:14:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F1017DUtente 22" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EFE73DUtente 23" at 16/04/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F082ECUtente 24" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F10CF6Utente 25" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F04B26Utente 26" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EFF723Utente 27" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F053EAUtente 28" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600DF2258Utente 29" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F04E7BUtente 30" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600E81620Utente 31" at 06/04/2018 23:58:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F4E73BUtente 32" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "070005EBB5Utente 33" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "06007CAD5CUtente 34" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EEB22DUtente 35" at 01/05/2018 19:38:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EF2ADDUtente 36" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0700159EF3Utente 37" at 04/05/2018 15:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F100FDUtente 38" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F0F943Utente 39" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600ED9C30Utente 40" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600F0B731Utente 41" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0700046F9EUtente 42" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600ED3AC7Utente 43" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EFA16FUtente 44" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600E98592Utente 45" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EFCAC1Utente 46" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0700072899Utente 47" at 04/05/2018 16:24:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600EE73BCUtente 48" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0600E80D8CUtente 49" at 12/04/2018 19:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "0700044327Utente 50" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] DBmanager - AddEntrance "07001596F7Utente 51" at 12/04/2018 19:20:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:15] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:34:25] CoreForm --- START OPERATION ---
+[05/05/2018 01:34:25] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:34:28] DBmanager - AddEntrance "010FF094A4ADMINISTRATOR" at 14/04/2018 18:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "07001AB8A9Marco Perencina" at 27/04/2018 00:42:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F11F63Utente 3" at 06/04/2018 21:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600C475A4Utente 4" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EE6E73Utente 5" at 12/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EE4328Utente 6" at 16/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EF5AC7Utente 7" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "07000630FBUtente 8" at 07/04/2018 00:46:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F11EA2Utente 10" at 12/04/2018 18:49:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F0F2D3Utente 11" at 12/04/2018 18:51:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F16FE0Utente 12" at 12/04/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EA8C20Utente 13" at 06/04/2018 22:08:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600E0FF48Utente 14" at 12/04/2018 18:52:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EA888CUtente 15" at 12/04/2018 18:53:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F587F6Utente 16" at 12/04/2018 19:06:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EEBE5AUtente 17e" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EF4B38Utente 18" at 12/04/2018 19:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0700054CE9Utente 19" at 12/04/2018 19:11:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "070003555DUtente 20" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EFA42DUtente 21" at 12/04/2018 19:14:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F1017DUtente 22" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EFE73DUtente 23" at 16/04/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F082ECUtente 24" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F10CF6Utente 25" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F04B26Utente 26" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EFF723Utente 27" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F053EAUtente 28" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600DF2258Utente 29" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F04E7BUtente 30" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600E81620Utente 31" at 06/04/2018 23:58:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F4E73BUtente 32" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "070005EBB5Utente 33" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "06007CAD5CUtente 34" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EEB22DUtente 35" at 01/05/2018 19:38:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EF2ADDUtente 36" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0700159EF3Utente 37" at 04/05/2018 15:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F100FDUtente 38" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F0F943Utente 39" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600ED9C30Utente 40" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600F0B731Utente 41" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0700046F9EUtente 42" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600ED3AC7Utente 43" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EFA16FUtente 44" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600E98592Utente 45" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EFCAC1Utente 46" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0700072899Utente 47" at 04/05/2018 16:24:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600EE73BCUtente 48" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0600E80D8CUtente 49" at 12/04/2018 19:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "0700044327Utente 50" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] DBmanager - AddEntrance "07001596F7Utente 51" at 12/04/2018 19:20:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:34:28] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:35:12] CoreForm --- START OPERATION ---
+[05/05/2018 01:35:12] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:38:01] CoreForm --- START OPERATION ---
+[05/05/2018 01:38:01] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:38:14] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:38:14] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:38:22] CoreForm --- START OPERATION ---
+[05/05/2018 01:38:22] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:38:24] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:38:24] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:49:36] CoreForm --- START OPERATION ---
+[05/05/2018 01:49:36] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:51:31] CoreForm --- START OPERATION ---
+[05/05/2018 01:51:31] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:51:33] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:51:33] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:51:39] CoreForm --- START OPERATION ---
+[05/05/2018 01:51:39] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:51:41] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 01:51:41] CoreForm - FINISH OPERATIONS -
+[05/05/2018 01:51:49] CoreForm --- START OPERATION ---
+[05/05/2018 01:51:49] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 01:54:03] CoreForm --- START OPERATION ---
+[05/05/2018 01:54:03] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 02:03:13] CoreForm --- START OPERATION ---
+[05/05/2018 02:03:13] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 02:03:16] DBmanager - AddEntrance "0600CC9E58Utente 9" at 26/04/2018 23:17:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[05/05/2018 02:03:16] CoreForm - FINISH OPERATIONS -
+[05/05/2018 02:03:20] CoreForm --- START OPERATION ---
+[05/05/2018 02:03:20] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[05/05/2018 02:03:22] CoreForm - FINISH OPERATIONS -

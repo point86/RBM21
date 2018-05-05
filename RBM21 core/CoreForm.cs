@@ -131,14 +131,22 @@ namespace RBM21_core
             
             foreach (string key in rbm21Users.Keys)
             {
-                var rbm21Time = rbm21Users[key].Time;
-                var dbTime = dbUsers[key].Time;
+                DateTime rbm21Time = rbm21Users[key].Time; //from rbm1 acquired data
+                DateTime dbTime;                           //from local database
+
+                //get last entrance memorized in sqlite database            .
+                int numEnt = dbUsers[key].Entrances.Count; //number of entrances of current user
+                if (numEnt >= 1)
+                    dbTime = DateTime.Parse(dbUsers[key].Entrances[0]); //most recent entrance.
+                else //if entrance's table doesn't contain anything about that user, create a fake old data, older than rbm21Time.
+                    dbTime = new DateTime(1980, 1,1);
+                
                 int result = DateTime.Compare(dbTime, rbm21Time);
                 if (result >= 0) //if sqlite date is more recent than rbm21's, do nothing.
                     continue;
-                //else we have to upgrade database.
+                //else we have to upgrade "Entrances" table.
                 int r1 = dbm.AddEntrance(dbUsers[key], rbm21Users[key].Time);
-                int a = dbm.updateUser(new User(dbUsers[key].Position, dbUsers[key].Nome, dbUsers[key].Key, rbm21Users[key].CreditoResiduo, rbm21Users[key].Time, dbUsers[key].UserCode, true));
+                //int a = dbm.updateUser(dbUsers[key].Position, dbUsers[key].Nome, dbUsers[key].Key, rbm21Users[key].CreditoResiduo, dbUsers[key].UserCode, true);
                 LogLabel.Text += "Aggiunto ingresso: \"" + dbUsers[key].UserCode + "\" Time:" + rbm21Time.ToString() + "\r\n";
             }
             dbm.Close();
