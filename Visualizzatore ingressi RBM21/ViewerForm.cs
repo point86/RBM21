@@ -44,7 +44,8 @@ namespace Visualizzatore_ingressi_RBM21
             //if db does not exist?
             dbm = new DBmanager(CurrentDatabase);
             users = dbm.GetAllUsers().ToArray();
-         //   FileReader fr = new FileReader(Settings.Default.CameRBM21FilePath);
+            dbm.Close();
+            //   FileReader fr = new FileReader(Settings.Default.CameRBM21FilePath);
             foreach (User usr in users ?? Enumerable.Empty<User>())
             {
                 //string[] row = { usr.Position.ToString(), usr.Nome, usr.Key, usr.Active.ToString() };
@@ -56,7 +57,7 @@ namespace Visualizzatore_ingressi_RBM21
             //dbm.populateDB(users);
             //last column width will fit the parent object.
              usersListView.AutoResizeColumn(3,ColumnHeaderAutoResizeStyle.HeaderSize);
-            dbm.Close();
+            
         }
        
         private void Form1_Load(object sender, EventArgs e)
@@ -143,7 +144,7 @@ namespace Visualizzatore_ingressi_RBM21
         private void button1_Click(object sender, EventArgs e)
         {
             string path = AppDomain.CurrentDomain.BaseDirectory + "RBM21 core.exe";
-            /* FIXME MUST BE TESTED!!!!!*/
+            
             Process process = new Process();
             // Configure the process using the StartInfo properties.
             process.StartInfo.FileName = path;
@@ -155,6 +156,9 @@ namespace Visualizzatore_ingressi_RBM21
             process.Start();
             process.WaitForExit();// Waits here for the process to exit.
             //this.Show();
+
+            this.Refresh();
+            
         }
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

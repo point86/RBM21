@@ -50,3 +50,186 @@
 [08/05/2018 17:28:35] CoreForm --- START OPERATION ---
 [08/05/2018 17:28:35] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
 [08/05/2018 17:28:38] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:36:54] CoreForm --- START OPERATION ---
+[08/05/2018 17:36:54] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:36:56] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:39:51] CoreForm --- START OPERATION ---
+[08/05/2018 17:39:51] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:42:49] DBmanager - AddEntrance "0600CC9E58Utente 9" at 08/05/2018 17:37:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:42:49] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:44:56] CoreForm --- START OPERATION ---
+[08/05/2018 17:44:56] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:44:59] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:45:11] CoreForm --- START OPERATION ---
+[08/05/2018 17:45:11] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:45:13] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:46:18] CoreForm --- START OPERATION ---
+[08/05/2018 17:46:18] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:46:42] DBmanager - AddEntrance "07000630FBUtente 8" at 08/05/2018 17:45:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:46:42] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:47:03] CoreForm --- START OPERATION ---
+[08/05/2018 17:47:03] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:47:06] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:49:08] CoreForm --- START OPERATION ---
+[08/05/2018 17:49:08] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:49:11] DBmanager - AddEntrance "07001AB8A9Marco Perencina" at 08/05/2018 17:47:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:49:11] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:49:58] CoreForm --- START OPERATION ---
+[08/05/2018 17:49:58] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:50:01] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:50:10] CoreForm --- START OPERATION ---
+[08/05/2018 17:50:10] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:50:13] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:50:22] CoreForm --- START OPERATION ---
+[08/05/2018 17:50:22] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:50:25] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:50:42] CoreForm --- START OPERATION ---
+[08/05/2018 17:50:42] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:50:45] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:50:57] CoreForm --- START OPERATION ---
+[08/05/2018 17:50:57] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:51:00] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:51:49] CoreForm --- START OPERATION ---
+[08/05/2018 17:51:49] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:51:52] CoreForm - Exception Occurred: System.NullReferenceException: Object reference not set to an instance of an object.
+   at RBM21_core.CoreForm.HardwareSync() in C:\Users\paolo\Desktop\RBM21\RBM21 core\CoreForm.cs:line 148
+   at RBM21_core.CoreForm.PerformOperations(Object sender, EventArgs e) in C:\Users\paolo\Desktop\RBM21\RBM21 core\CoreForm.cs:line 47
+   at System.Windows.Forms.Form.OnShown(EventArgs e)
+   at System.Windows.Forms.Form.CallShownEvent()
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackDo(ThreadMethodEntry tme)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbackHelper(Object obj)
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Windows.Forms.Control.InvokeMarshaledCallback(ThreadMethodEntry tme)
+   at System.Windows.Forms.Control.InvokeMarshaledCallbacks()
+   at System.Windows.Forms.Control.WndProc(Message& m)
+   at System.Windows.Forms.ScrollableControl.WndProc(Message& m)
+   at System.Windows.Forms.Form.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.OnMessage(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.DebuggableCallback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+   at System.Windows.Forms.UnsafeNativeMethods.DispatchMessageW(MSG& msg)
+   at System.Windows.Forms.Application.ComponentManager.System.Windows.Forms.UnsafeNativeMethods.IMsoComponentManager.FPushMessageLoop(IntPtr dwComponentID, Int32 reason, Int32 pvLoopData)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoopInner(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.ThreadContext.RunMessageLoop(Int32 reason, ApplicationContext context)
+   at System.Windows.Forms.Application.Run(Form mainForm)
+   at RBM21_core.Program.Main() in C:\Users\paolo\Desktop\RBM21\RBM21 core\Program.cs:line 19
+[08/05/2018 17:53:26] CoreForm --- START OPERATION ---
+[08/05/2018 17:53:26] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:53:29] DBmanager - AddEntrance "010FF094A4ADMINISTRATOR" at 14/04/2018 18:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "07001AB8A9Marco Perencina" at 08/05/2018 17:47:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F11F63Utente 3" at 06/05/2018 21:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600C475A4Utente 4" at 08/05/2018 17:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EE6E73Utente 5" at 12/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EE4328Utente 6" at 16/04/2018 17:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EF5AC7Utente 7" at 26/04/2018 23:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "07000630FBUtente 8" at 08/05/2018 17:45:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600CC9E58Utente 9" at 08/05/2018 17:37:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F11EA2Utente 10" at 12/04/2018 18:49:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F0F2D3Utente 11" at 12/04/2018 18:51:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F16FE0Utente 12" at 12/04/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EA8C20Utente 13" at 06/05/2018 22:08:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600E0FF48Utente 14" at 12/04/2018 18:52:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EA888CUtente 15" at 12/04/2018 18:53:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F587F6Utente 16" at 12/04/2018 19:06:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EEBE5AUtente 17e" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EF4B38Utente 18" at 12/04/2018 19:10:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0700054CE9Utente 19" at 12/04/2018 19:11:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "070003555DUtente 20" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EFA42DUtente 21" at 12/04/2018 19:14:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F1017DUtente 22" at 15/04/2018 01:25:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EFE73DUtente 23" at 16/04/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F082ECUtente 24" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F10CF6Utente 25" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F04B26Utente 26" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EFF723Utente 27" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F053EAUtente 28" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600DF2258Utente 29" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F04E7BUtente 30" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600E81620Utente 31" at 06/05/2018 23:58:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F4E73BUtente 32" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "070005EBB5Utente 33" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "06007CAD5CUtente 34" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EEB22DUtente 35" at 01/05/2018 19:38:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EF2ADDUtente 36" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0700159EF3Utente 37" at 04/05/2018 15:40:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F100FDUtente 38" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F0F943Utente 39" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600ED9C30Utente 40" at 01/05/2018 18:50:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600F0B731Utente 41" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0700046F9EUtente 42" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600ED3AC7Utente 43" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EFA16FUtente 44" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600E98592Utente 45" at 12/04/2018 19:21:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EFCAC1Utente 46" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0700072899Utente 47" at 04/05/2018 16:24:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600EE73BCUtente 48" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0600E80D8CUtente 49" at 12/04/2018 19:18:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "0700044327Utente 50" at 01/05/2018 00:00:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] DBmanager - AddEntrance "07001596F7Utente 51" at 12/04/2018 19:20:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:53:29] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:53:50] CoreForm --- START OPERATION ---
+[08/05/2018 17:53:50] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:53:52] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:54:23] CoreForm --- START OPERATION ---
+[08/05/2018 17:54:23] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:54:26] CoreForm - FINISH OPERATIONS -
+[08/05/2018 17:56:52] CoreForm --- START OPERATION ---
+[08/05/2018 17:56:52] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 17:56:55] DBmanager - AddEntrance "0600EF5AC7Utente 7" at 08/05/2018 17:54:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 17:56:55] CoreForm - FINISH OPERATIONS -
+[08/05/2018 18:06:11] CoreForm --- START OPERATION ---
+[08/05/2018 18:06:11] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 18:06:14] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:52:08] CoreForm --- START OPERATION ---
+[08/05/2018 23:52:08] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:52:11] DBmanager - AddEntrance "0600F100FDUtente 38" at 08/05/2018 23:51:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 23:52:11] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:52:24] CoreForm --- START OPERATION ---
+[08/05/2018 23:52:24] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:52:27] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:52:46] CoreForm --- START OPERATION ---
+[08/05/2018 23:52:46] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:52:49] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:52:53] CoreForm --- START OPERATION ---
+[08/05/2018 23:52:53] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:52:56] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:53:54] CoreForm --- START OPERATION ---
+[08/05/2018 23:53:54] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:53:57] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:54:57] CoreForm --- START OPERATION ---
+[08/05/2018 23:54:57] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:56:19] DBmanager - AddEntrance "0600F0F943Utente 39" at 08/05/2018 23:53:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 23:56:19] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:56:57] CoreForm --- START OPERATION ---
+[08/05/2018 23:56:57] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:59:16] CoreForm --- START OPERATION ---
+[08/05/2018 23:59:16] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:59:18] DBmanager - AddEntrance "0700046F9EUtente 42" at 08/05/2018 23:57:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 23:59:18] CoreForm - FINISH OPERATIONS -
+[09/05/2018 00:04:44] CoreForm --- START OPERATION ---
+[09/05/2018 00:04:44] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[09/05/2018 00:04:46] CoreForm - FINISH OPERATIONS -
+[09/05/2018 00:04:51] CoreForm --- START OPERATION ---
+[09/05/2018 00:04:51] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[09/05/2018 00:04:53] CoreForm - FINISH OPERATIONS -
+[09/05/2018 00:07:43] CoreForm --- START OPERATION ---
+[09/05/2018 00:07:43] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[09/05/2018 00:07:46] DBmanager - AddEntrance "0600E80D8CUtente 49" at 09/05/2018 00:05:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[09/05/2018 00:07:46] CoreForm - FINISH OPERATIONS -
+[09/05/2018 00:29:01] CoreForm --- START OPERATION ---
+[09/05/2018 00:29:01] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[09/05/2018 00:29:29] DBmanager - AddEntrance "0600F1017DUtente 22" at 09/05/2018 00:29:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[09/05/2018 00:29:29] CoreForm - FINISH OPERATIONS -
+[09/05/2018 00:30:08] CoreForm --- START OPERATION ---
+[09/05/2018 00:30:08] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[09/05/2018 00:30:14] DBmanager - AddEntrance "0600EFA42DUtente 21" at 09/05/2018 00:30:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[09/05/2018 00:30:14] CoreForm - FINISH OPERATIONS -
+[09/05/2018 00:31:10] CoreForm --- START OPERATION ---
+[09/05/2018 00:31:10] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[09/05/2018 00:31:13] CoreForm - FINISH OPERATIONS -
+[09/05/2018 00:31:19] CoreForm --- START OPERATION ---
+[09/05/2018 00:31:19] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[09/05/2018 00:31:21] DBmanager - AddEntrance "070003555DUtente 20" at 09/05/2018 00:31:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[09/05/2018 00:31:21] CoreForm - FINISH OPERATIONS -

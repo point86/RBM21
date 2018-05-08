@@ -47,7 +47,7 @@ namespace RBM21_core
             usr.Time = FileReader.timeCalculator(day, minutes);
             usr.Key = response[3].ToString("X2") + response[4].ToString("X2") + response[5].ToString("X2") + response[6].ToString("X2") + response[7].ToString("X2");
             //usr.UserCode = usr.Key; //FIXME
-
+            
             return usr;
         }
         /*

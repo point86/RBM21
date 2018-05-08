@@ -1,0 +1,7 @@
+[08/05/2018 23:50:30] CoreForm --- START OPERATION ---
+[08/05/2018 23:50:30] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:50:32] DBmanager - AddEntrance "0600EEB22DUtente 35" at 08/05/2018 18:07:00. 1 rows affected (database: C:\\Users\\paolo\\Desktop\\cai.sqlite).
+[08/05/2018 23:50:32] CoreForm - FINISH OPERATIONS -
+[08/05/2018 23:51:53] CoreForm --- START OPERATION ---
+[08/05/2018 23:51:53] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[08/05/2018 23:51:55] CoreForm - FINISH OPERATIONS -

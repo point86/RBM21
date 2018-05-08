@@ -115,6 +115,7 @@ namespace RBM21_core
                     LogLabel.Text += "Add \"" + usercode + "\" to SQLite user table.\r\n";
                     dbm.AddUser(cameUsers[usercode]);
                 }
+            dbm.Close();
         }
 
         /*update datbase table "entrances". Sync data between RBM21 and local sqlite database. */
@@ -143,8 +144,8 @@ namespace RBM21_core
                 DateTime rbm21Time = rbm21Users[key].Time; //from rbm1 acquired data
                 DateTime dbTime;                           //from local database
 
-                //get last entrance memorized in sqlite database            .
-                int numEnt = dbUsers[key].Entrances.Count; //number of entrances of current user
+                //get last entrance memorized in sqlite database        THOSE LINES CAN BE BETTER
+                int numEnt = (dbUsers[key].Entrances ==null)? 0 : dbUsers[key].Entrances.Count; //number of entrances of current user
                 if (numEnt >= 1)
                     dbTime = DateTime.Parse(dbUsers[key].Entrances[0]); //most recent entrance.
                 else //if entrance's table doesn't contain anything about that user, create a fake old data, older than rbm21Time.

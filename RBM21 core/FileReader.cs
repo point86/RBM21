@@ -125,13 +125,13 @@ namespace RBM21_core
          * RBM21 memorize only Day and Time, not Month's of last access.
          * So we need to guess that value! if day is futher than now, RBM21 is referring to the previous month.
          */
-        public static DateTime timeCalculator(int day, int minutes) //minutes: total time expresses in minutes (HH=minutes/60; MM=minutes%60)
+        public static DateTime timeCalculator(int entDay, int entMinutes) //minutes: total time expresses in minutes (HH=minutes/60; MM=minutes%60)
         {
             DateTime now = DateTime.Now;
-            if(now.Day > day | (now.Day == day & (now.Hour * 60 + now.Minute > minutes)))
-                return new DateTime(now.Year, now.Month, day, minutes / 60, minutes % 60, 0);
-            /*if ((now.Day == day) & (now.Hour*60+now.Minute >minutes ))
-                return new DateTime(now.Year, now.Month, day, minutes / 60, minutes % 60, 0);*/
+            //case RBM21 data is in the past
+            if (now.Day > entDay | (now.Day == entDay & (now.Hour * 60 + now.Minute >= entMinutes)))
+                return new DateTime(now.Year, now.Month, entDay, entMinutes / 60, entMinutes % 60, 0);
+            //case RBM21 data is in the future
             else
             {
                 var y = now.Year;
@@ -141,7 +141,7 @@ namespace RBM21_core
                     m = 12;
                     y--;
                 }
-                return new DateTime(y, m, day, minutes / 60, minutes % 60, 0);
+                return new DateTime(y, m, entDay, entMinutes / 60, entMinutes % 60, 0);
             }           
         }
     }
