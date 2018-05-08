@@ -55,7 +55,8 @@ namespace Visualizzatore_ingressi_RBM21
             }
             //dbm.populateDB(users);
             //last column width will fit the parent object.
-             usersListView.AutoResizeColumn(3,ColumnHeaderAutoResizeStyle.HeaderSize);            
+             usersListView.AutoResizeColumn(3,ColumnHeaderAutoResizeStyle.HeaderSize);
+            dbm.Close();
         }
        
         private void Form1_Load(object sender, EventArgs e)
@@ -65,25 +66,26 @@ namespace Visualizzatore_ingressi_RBM21
 
         protected override void OnClosed(EventArgs e)
         {
-            dbm.Close();
+         //   dbm.Close();
             base.OnClosed(e);
         }
 
-        /* SINCRONIZZAZIONE */
+        /* SINCRONIZZAZIONE old
         private void button2_Click(object sender, EventArgs e)
         {
             //User[] users = new User[50];
             //users = rbm21.ReadAllUsers();
             //https://msdn.microsoft.com/it-it/library/system.windows.forms.listview(v=vs.110).aspx
-/*            for (int i=0; i<51; i++)
+          for (int i=0; i<51; i++)
             {
                 User usr = rbm21.GetRBM21UserData(i);
                 string[] row = { usr.Position.ToString(), usr.Nome, usr.Key, };
                 var listViewItem = new ListViewItem(row);
                 usersListView.Items.Add(listViewItem);
             }           
-*/            
+            
         }
+*/
 
         private void label1_Click_1(object sender, EventArgs e)
         {
@@ -127,7 +129,7 @@ namespace Visualizzatore_ingressi_RBM21
         {
 
         }
-
+        /*
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
@@ -137,13 +139,22 @@ namespace Visualizzatore_ingressi_RBM21
         {
 
         }
-
+        */
         private void button1_Click(object sender, EventArgs e)
         {
-            /*
-             * start: "rbm21core.exe hardwaresync", in the same folder as this exe             
-             */
+            string path = AppDomain.CurrentDomain.BaseDirectory + "RBM21 core.exe";
+            /* FIXME MUST BE TESTED!!!!!*/
+            Process process = new Process();
+            // Configure the process using the StartInfo properties.
+            process.StartInfo.FileName = path;
+            process.StartInfo.Arguments = "hardwaresync";
+            process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
 
+            //this.Hide();
+
+            process.Start();
+            process.WaitForExit();// Waits here for the process to exit.
+            //this.Show();
         }
 
         private void statusStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)

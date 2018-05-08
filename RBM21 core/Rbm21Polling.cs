@@ -103,7 +103,7 @@ namespace RBM21_core
             do
             {
                 User u = GetRBM21UserData(i);
-                //if usre does not exists, rbm21 will return 00 00 00 00 00 00 00 00 00 00 00 00 11 00 
+                //if user does not exists, rbm21 return 00 00 00 00 00 00 00 00 00 00 00 00 11 00, so this manage that case
                 if (u.Key == "0000000000")
                     break;
                 usersList.Add(u);

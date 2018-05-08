@@ -19,24 +19,33 @@ namespace RBM21_core
     {
         static System.Windows.Forms.Timer exitTimer = new System.Windows.Forms.Timer();
         static int secondsToExit = 2000;
-
+        
         public CoreForm()
         {
-            Tools.LogMessageToFile("CoreForm --- START OPERATION ---");
-            System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;
+            
             InitializeComponent();
+            Shown += PerformOperations;
+        }
+
+
+        private void PerformOperations(object sender, EventArgs e)
+        {            
+            Tools.LogMessageToFile("CoreForm --- START OPERATION ---");
+
+            System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;            
             String[] args = Environment.GetCommandLineArgs();
 
             LogLabel.Text += "CameRBM21FilePath: " + Settings.Default.CameRBM21FilePath + "\r\n";
             LogLabel.Text += "SQLiteDatabasePath: " + Settings.Default.SQLiteDatabasePath + "\r\n";
         
+
             if(CheckNeedToSync(Settings.Default.CameRBM21FilePath, Settings.Default.SQLiteDatabasePath))
                 SyncUsersTable(); 
 
             //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
             if (args.Length == 2 && args[1] == "hardwaresync")
                 HardwareSync();
-
+                
             LogLabel.Text += "\r\n - OPERATIONS COMPLETED -";
             button1.Enabled = true;
             exitTimer.Tick += new EventHandler(TimerEventProcessor);          

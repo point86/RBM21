@@ -207,7 +207,7 @@ namespace Visualizzatore_ingressi_RBM21
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(738, 21);
+            this.button1.Location = new System.Drawing.Point(717, 21);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 48);
             this.button1.TabIndex = 13;
