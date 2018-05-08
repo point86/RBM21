@@ -21,45 +21,53 @@ namespace Visualizzatore_ingressi_RBM21
     {       
         User[] users;
         DBmanager dbm;
+        string databasePath;
 
-        public ViewerForm(bool modify, string CurrentDatabase)
+        public ViewerForm(bool allowedChange, string databasePath)
         {
             InitializeComponent();
-
-            //toolStripStatusLabel1.Text = CurrentDatabase
-            //if filepath is hardcoded, must remove the backslash;
-            toolStripStatusLabel1.Text = CurrentDatabase.Replace(@"\\", "\\");
-            DateTime lastModified = System.IO.File.GetLastWriteTime(CurrentDatabase);
-            toolStripStatusLabel2.Text = "Ultima modifica: "+lastModified.ToString("ddd dd MMM, HH:mm");
-
+            this.databasePath = databasePath;
+            dataLoader(databasePath);
+            
             //if bool = true, can show the sync button, so database can be upgraded via ViewerForm
             //otherwise database is ONLY READ (maybe an old database, backup, etc..).
-            button1.Visible = modify;
+            button1.Visible = allowedChange;
             //disable "Sincronizzazione" button, if sync is disabled (and change the tooltip text so user will be informed)
             button1.Enabled = Settings.Default.Enabled;
             if(button1.Enabled == false)            
                 toolTip1.SetToolTip(this.button1, "La sincronizzazione è disabilitata, controlla su \"Impostazioni\" nella schermata precedente");
-            toolTip1.SetToolTip(this.button1, "ciaooooo");
-
-            //if db does not exist?
-            dbm = new DBmanager(CurrentDatabase);
-            users = dbm.GetAllUsers().ToArray();
-            dbm.Close();
-            //   FileReader fr = new FileReader(Settings.Default.CameRBM21FilePath);
-            foreach (User usr in users ?? Enumerable.Empty<User>())
-            {
-                //string[] row = { usr.Position.ToString(), usr.Nome, usr.Key, usr.Active.ToString() };
-                string[] row = {usr.Nome, usr.Key, usr.UserCode, usr.Active.ToString() };
-                ListViewItem listViewItem = new ListViewItem(row);
-                listViewItem.Tag = usr;
-                usersListView.Items.Add(listViewItem);
-            }
-            //dbm.populateDB(users);
+            toolTip1.SetToolTip(this.button1, "Sincronizzazione");
+          
             //last column width will fit the parent object.
              usersListView.AutoResizeColumn(3,ColumnHeaderAutoResizeStyle.HeaderSize);
             
         }
-       
+        private void dataLoader(string databasePath)
+        {
+            //toolStripStatusLabel1.Text = CurrentDatabase
+            //if filepath is hardcoded, must remove the backslash;
+            toolStripStatusLabel1.Text = databasePath.Replace(@"\\", "\\");
+            DateTime lastModified = System.IO.File.GetLastWriteTime(databasePath);
+            toolStripStatusLabel2.Text = "Ultima modifica: " + lastModified.ToString("ddd dd MMM, HH:mm");
+
+            //if db does not exist?
+            dbm = new DBmanager(databasePath);
+            users = dbm.GetAllUsers().ToArray();
+            dbm.Close();
+            //   FileReader fr = new FileReader(Settings.Default.CameRBM21FilePath);
+
+            usersListView.Items.Clear();
+            foreach (User usr in users ?? Enumerable.Empty<User>())
+            {
+                //string[] row = { usr.Position.ToString(), usr.Nome, usr.Key, usr.Active.ToString() };
+                string[] row = { usr.Nome, usr.Key, usr.UserCode, usr.Active.ToString() };
+                ListViewItem listViewItem = new ListViewItem(row);
+                listViewItem.Tag = usr;
+                usersListView.Items.Add(listViewItem);
+            }
+
+
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             
@@ -157,7 +165,7 @@ namespace Visualizzatore_ingressi_RBM21
             process.WaitForExit();// Waits here for the process to exit.
             //this.Show();
 
-            this.Refresh();
+            dataLoader(databasePath);
             
         }
 
