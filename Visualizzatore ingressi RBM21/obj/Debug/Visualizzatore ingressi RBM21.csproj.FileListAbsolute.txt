@@ -28,6 +28,8 @@ C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\bin\Debug\Visualizzat
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\bin\Debug\System.Data.SQLite.dll
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\bin\Debug\System.Data.SQLite.xml
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore ingressi RBM21.csprojResolveAssemblyReference.cache
+C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Interop.TaskScheduler.dll
+C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore ingressi RBM21.csproj.ResolveComReference.cache
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore_ingressi_RBM21.ViewerForm.resources
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore_ingressi_RBM21.Properties.Resources.resources
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore_ingressi_RBM21.SettingsForm.resources

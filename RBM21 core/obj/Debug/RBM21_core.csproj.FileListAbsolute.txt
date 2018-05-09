@@ -1,0 +1,11 @@
+C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\Properties\Settings.Designer.cs
+C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\Properties\Settings.settings
+C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 core.exe
+C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 core.pdb
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21_core.csprojResolveAssemblyReference.cache
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21_core.CoreForm.resources
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21_core.Properties.Resources.resources
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21_core.csproj.GenerateResource.Cache
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21_core.csproj.CoreCompileInputs.cache
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21 core.exe
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21 core.pdb

@@ -18,7 +18,7 @@ namespace RBM21_core
     public partial class CoreForm : Form
     {
         static System.Windows.Forms.Timer exitTimer = new System.Windows.Forms.Timer();
-        static int secondsToExit = 2000;
+        static int secondsToExit = 20;
         
         public CoreForm()
         {

@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using RBM21_core;
+
 
 namespace Visualizzatore_ingressi_RBM21
 {
@@ -111,8 +113,40 @@ namespace Visualizzatore_ingressi_RBM21
                 Settings.Default.SerialPort = "COM2";
 
             Settings.Default.Enabled = checkBox1.Checked;
+            enableScheduledTask(checkBox1.Checked);
 
             this.Close();
+        }
+
+        void enableScheduledTask(bool enabled)
+        {
+            if (enabled == true)
+                EnableSync();
+            else
+                DisableSync();
+
+        }
+        static void EnableSync()
+        {
+            string strArguments = " /Create /tn RBM21Sync /tr \"'C:\\Users\\paolo\\Desktop\\RBM21\\RBM21 core\\bin\\Debug\\RBM21 Core.exe' hardwaresync\"  /sc DAILY  /st 18:25:00 /f";
+            Process p = new Process();
+            p.StartInfo.FileName = @"schtasks";
+            p.StartInfo.Arguments = strArguments;    
+            p.Start();
+
+            p.WaitForExit();
+        }
+
+        static void DisableSync()
+        {
+
+            string strArguments = " /Delete /tn RBM21Sync /f";
+            Process p = new Process();
+            p.StartInfo.FileName = @"schtasks";
+            p.StartInfo.Arguments = strArguments;
+            p.Start();
+
+            p.WaitForExit();
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
