@@ -38,3 +38,7 @@ C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzat
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore ingressi RBM21.csproj.CoreCompileInputs.cache
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore ingressi RBM21.exe
 C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore ingressi RBM21.pdb
+C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\bin\Debug\Visualizzatore ingressi RBM21.exe.manifest
+C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\bin\Debug\Visualizzatore ingressi RBM21.application
+C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore ingressi RBM21.exe.manifest
+C:\Users\paolo\Desktop\RBM21\Visualizzatore ingressi RBM21\obj\Debug\Visualizzatore ingressi RBM21.application

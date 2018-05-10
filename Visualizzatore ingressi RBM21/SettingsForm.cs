@@ -163,15 +163,7 @@ namespace Visualizzatore_ingressi_RBM21
 
             p.WaitForExit();
         }
-     
-
-        //open windows Tasck Scheduler, from control panel
-        private void button5_Click(object sender, EventArgs e)
-        {
-            var cplPath = System.IO.Path.Combine(Environment.SystemDirectory, "control.exe");
-            System.Diagnostics.Process.Start("taskschd.msc", cplPath);
-        }
-
+             
         //open windows Tasck Scheduler, from control panel
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

@@ -122,8 +122,8 @@
             // toolStripLabel2
             // 
             this.toolStripLabel2.Name = "toolStripLabel2";
-            this.toolStripLabel2.Size = new System.Drawing.Size(92, 22);
-            this.toolStripLabel2.Text = "Versione 0.5 dev";
+            this.toolStripLabel2.Size = new System.Drawing.Size(70, 22);
+            this.toolStripLabel2.Text = "Versione 1.0";
             // 
             // toolStripSeparator1
             // 
