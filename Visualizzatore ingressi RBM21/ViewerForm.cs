@@ -151,11 +151,11 @@ namespace Visualizzatore_ingressi_RBM21
         */
         private void button1_Click(object sender, EventArgs e)
         {
-            string path = AppDomain.CurrentDomain.BaseDirectory + "RBM21 core.exe";
+            string RBM21CorePath = AppDomain.CurrentDomain.BaseDirectory + "RBM21 core.exe";
             
             Process process = new Process();
             // Configure the process using the StartInfo properties.
-            process.StartInfo.FileName = path;
+            process.StartInfo.FileName = RBM21CorePath;
             process.StartInfo.Arguments = "hardwaresync";
             process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
 

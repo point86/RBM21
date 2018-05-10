@@ -32,10 +32,10 @@ namespace Visualizzatore_ingressi_RBM21
             else if (Settings.Default.SerialPort == "COM2")
                 radioButton2.Checked = true;
 
-            //set dateTimePicker1 to show only time (and not the calendar)            
+         /*   //set dateTimePicker1 to show only time (and not the calendar)            
             dateTimePicker1.Format = DateTimePickerFormat.Custom;
             dateTimePicker1.CustomFormat = "HH:mm";
-            dateTimePicker1.ShowUpDown = true;
+            dateTimePicker1.ShowUpDown = true;*/
 
             checkBox1.Checked = Settings.Default.Enabled;
         }
@@ -102,6 +102,9 @@ namespace Visualizzatore_ingressi_RBM21
 
         }
 
+        /*
+         * Retrieve new setting from this form (SettingsForm) and save to c# standard NET settings.
+         */
         private void button1_Click(object sender, EventArgs e)
         {
             Settings.Default.SQLiteDatabasePath = DBtextBox.Text;
@@ -126,20 +129,32 @@ namespace Visualizzatore_ingressi_RBM21
                 DisableSync();
 
         }
+        /*
+         *  Sync will be performed by "RBM21 core.exe". 
+         *  Microsoft Windows have a built-in feature to run a specified task in a scheduled manner, Task Scheduler. 
+         *  Tasks can be manipulated via Control Panel or with a cmd tool, schtasks, which is used in this case.
+         */
         static void EnableSync()
         {
-            string strArguments = " /Create /tn RBM21Sync /tr \"'C:\\Users\\paolo\\Desktop\\RBM21\\RBM21 core\\bin\\Debug\\RBM21 Core.exe' hardwaresync\"  /sc DAILY  /st 18:25:00 /f";
+            //calling schtasks with appropriate cmd options
+            string RBM21CorePath = AppDomain.CurrentDomain.BaseDirectory + "RBM21 core.exe";
+            /* Cmd line:
+               Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc DAILY  /st 12:00:00 /f
+            */
+            string strArguments = " /Create /tn RBM21Sync /tr \"'" + RBM21CorePath + "' hardwaresync\"  /sc DAILY  /st 12:00:00 /f";
             Process p = new Process();
-            p.StartInfo.FileName = @"schtasks";
+            p.StartInfo.FileName = "schtasks";
             p.StartInfo.Arguments = strArguments;    
             p.Start();
 
-            p.WaitForExit();
+            p.WaitForExit();                   
         }
 
         static void DisableSync()
         {
-
+            /* Cmd Line: 
+               schtasks /Delete /tn RBM21Sync /f
+            */
             string strArguments = " /Delete /tn RBM21Sync /f";
             Process p = new Process();
             p.StartInfo.FileName = @"schtasks";
@@ -148,10 +163,20 @@ namespace Visualizzatore_ingressi_RBM21
 
             p.WaitForExit();
         }
+     
 
-        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        //open windows Tasck Scheduler, from control panel
+        private void button5_Click(object sender, EventArgs e)
         {
+            var cplPath = System.IO.Path.Combine(Environment.SystemDirectory, "control.exe");
+            System.Diagnostics.Process.Start("taskschd.msc", cplPath);
+        }
 
+        //open windows Tasck Scheduler, from control panel
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var cplPath = System.IO.Path.Combine(Environment.SystemDirectory, "control.exe");
+            System.Diagnostics.Process.Start("taskschd.msc", cplPath);
         }
     }
 }

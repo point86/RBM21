@@ -31,3 +31,4 @@ C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21 core.csproj.CoreCompileI
 C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21 core.exe
 C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21 core.pdb
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 core.pdb
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21 core.csprojResolveAssemblyReference.cache

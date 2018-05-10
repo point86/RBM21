@@ -29,30 +29,31 @@ namespace RBM21_core
 
 
         private void PerformOperations(object sender, EventArgs e)
-        {            
-            Tools.LogMessageToFile("CoreForm --- START OPERATION ---");
+        {
+              Tools.LogMessageToFile("CoreForm --- START OPERATION ---");
 
-            System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;            
-            String[] args = Environment.GetCommandLineArgs();
+              System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;            
+              String[] args = Environment.GetCommandLineArgs();
 
-            LogLabel.Text += "CameRBM21FilePath: " + Settings.Default.CameRBM21FilePath + "\r\n";
-            LogLabel.Text += "SQLiteDatabasePath: " + Settings.Default.SQLiteDatabasePath + "\r\n";
-        
+              LogLabel.Text += "CameRBM21FilePath: " + Settings.Default.CameRBM21FilePath + "\r\n";
+              LogLabel.Text += "SQLiteDatabasePath: " + Settings.Default.SQLiteDatabasePath + "\r\n";
 
-            if(CheckNeedToSync(Settings.Default.CameRBM21FilePath, Settings.Default.SQLiteDatabasePath))
-                SyncUsersTable(); 
 
-            //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
-            if (args.Length == 2 && args[1] == "hardwaresync")
-                HardwareSync();
-                
-            LogLabel.Text += "\r\n - OPERATIONS COMPLETED -";
-            button1.Enabled = true;
-            exitTimer.Tick += new EventHandler(TimerEventProcessor);          
-            exitTimer.Interval = 1000;
-            exitTimer.Start();
-            
-            Tools.LogMessageToFile("CoreForm - FINISH OPERATIONS -");
+              if(CheckNeedToSync(Settings.Default.CameRBM21FilePath, Settings.Default.SQLiteDatabasePath))
+                  SyncUsersTable(); 
+
+              //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
+              if (args.Length == 2 && args[1] == "hardwaresync")
+                  HardwareSync();
+
+              LogLabel.Text += "\r\n - OPERATIONS COMPLETED -";
+              button1.Enabled = true;
+              exitTimer.Tick += new EventHandler(TimerEventProcessor);          
+              exitTimer.Interval = 1000;
+              exitTimer.Start();
+
+              Tools.LogMessageToFile("CoreForm - FINISH OPERATIONS -");             
+
         }
         static void UnhandledExceptionTrapper(object sender, UnhandledExceptionEventArgs e)
         {
@@ -129,8 +130,10 @@ namespace RBM21_core
 
             List<User> rbm21List = new List<User>();
             List<User> dbList = new List<User>();
-            rbm21List = rbm21.ReadAllUsers();
+            rbm21List = rbm21.ReadAllUsers();            
             dbList = dbm.GetActiveUsers();
+            rbm21.Close();
+
             /* Since we are syncing with rbm21, we are only dealing with active users. Active users can be identified
              * with ONLY their key (UserCode is superflous). 
              *     Length(Active users in sqlite) == Length(Rbm21 users)   */

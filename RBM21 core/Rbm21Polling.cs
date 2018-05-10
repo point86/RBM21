@@ -19,17 +19,73 @@ namespace RBM21_core
         {
             Debug.Indent();
             Debug.WriteLine("Executing RBM21Polling's constructor");
-            /* Console.WriteLine("Available Handshake options:");
-           foreach (string s in Enum.GetNames(typeof(Handshake)))
-           {
-               Console.WriteLine("   {0}", s);
-           }*/
-            //controllare il software Came come imposta handshake, timeou
+                      
             sp = new SerialPort(port, 19200, Parity.None, 8, StopBits.One);
+            sp.Open();
             // sp.ReceivedBytesThreshold = 14;
-
-            sp.Open();//is it safe to open the port only here? no! FIXME! control when it close!
+            //sp.Open();//is it safe to open the port only here? no! FIXME! control when it close!
         }
+        
+        /*
+        System.Windows.Forms.Timer maxTimeTimer = new System.Windows.Forms.Timer();
+        public bool CheckConnection()
+        {
+            
+            SerialPort sp = null;           
+            
+            maxTimeTimer.Tick += new EventHandler(maxTimeEventProcessor);
+            maxTimeTimer.Interval = 5000;
+
+            sp = new SerialPort("COM2", 19200, Parity.None, 8, StopBits.One);
+            sp.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
+            sp.Open();
+            Byte[] request = new Byte[] { 0x46, 0x72 };
+
+            maxTimeTimer.Start();
+            sp.Write(request, 0, request.Length);
+            
+            
+            sp.Close();
+            return true;
+        }
+        public bool CheckConnection1()
+        {
+            SerialPort sp = null;
+
+                maxTimeTimer.Tick += new EventHandler(maxTimeEventProcessor);
+                maxTimeTimer.Interval = 5000;
+
+                    sp = new SerialPort("COM2", 19200, Parity.None, 8, StopBits.One);
+                sp.DataReceived += new SerialDataReceivedEventHandler(port_DataReceived);
+                sp.Open();
+                    Byte[] request = new Byte[] { 0x46, 0x72 };
+
+                     maxTimeTimer.Start();
+                    sp.Write(request, 0, request.Length);
+                    Byte[] buf = new Byte[20];
+                    int readed = 0;
+                  
+                    while (readed <= 0)
+                    {
+                        //when it read some bytes, they will be stored in the appropriate position of buf
+                        readed += sp.Read(buf, readed, 10);
+                    }
+
+            Console.WriteLine("Siii, va tutto beneeeee");
+                    maxTimeTimer.Stop();
+                    sp.Close();
+                    return true;
+        }
+private void port_DataReceived(object sender, SerialDataReceivedEventArgs e)
+        {
+            Console.WriteLine("Siii, va tutto beneeeee");
+            maxTimeTimer.Stop();
+        }
+        private void maxTimeEventProcessor(Object myObject, EventArgs myEventArgs)
+        {
+            Debug.WriteLine("è passato troppo tempo, che il disp sia scollegato?");
+        }
+        */
 
         // store the response (a 14byte array) in a User class          
         public User HexToUser(byte[] response)
@@ -62,9 +118,7 @@ namespace RBM21_core
          * so this condition is easy to catch (Key== "0000000000")
          */
         public User GetRBM21UserData(Int32 userIndex)
-        {      
-            //TODO if user does not exists? we have to return NULL!
-
+        {
             // 0<userIndex<500; we need only the last 2 bytes of that variable.
             byte b0 = (byte)userIndex,
                  b1 = (byte)(userIndex >> 8);            
@@ -84,11 +138,8 @@ namespace RBM21_core
                 readed += sp.Read(buf, readed, ResponseLength-readed);                
             }
 
-            Debug.WriteLine("R: {0}", ByteArrayToString(buf));            
-            //FIXME xche sempre ora risponde cosi???? 00 00 00 00 00 00 00 00 00 00 00 00 11 00 : R: {0}
-            //store the response in a User class instance.
+            Debug.WriteLine("R: {0}", ByteArrayToString(buf));
 
-            //store the response in a User class instance.
             return HexToUser(buf);            
         }
 
@@ -113,7 +164,7 @@ namespace RBM21_core
             sw.Stop();
             Debug.WriteLine("Time taken: {0}s", sw.Elapsed.TotalMilliseconds / 1000);
 
-            return usersList;
+            return usersList;            
         }
 
 
