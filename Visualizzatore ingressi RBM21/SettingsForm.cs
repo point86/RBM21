@@ -15,30 +15,32 @@ namespace Visualizzatore_ingressi_RBM21
 {
     public partial class SettingsForm : Form
     {
-        //TODO save setting to a xml file? and write a custom class?
+        SettingsManager sm;
         public SettingsForm()
         {
             InitializeComponent();
-           
+            /*
             string SqliteDB = Settings.Default.SQLiteDatabasePath;
-            string DatiImpianto = Settings.Default.CameRBM21FilePath;
+            string DatiImpianto = Settings.Default.CameRBM21FilePath;*/
+
+            sm = new SettingsManager();
+            string SqliteDB = sm.SQLiteDB;
+            string DatiImpianto = sm.CameFilePath;
+            bool Enabled = sm.Enabled;
+            //FIXME servon davvero?
             DBtextBox.Text = (SqliteDB.Replace(@"\\", "\\"));
             CameFiletextBox.Text = (DatiImpianto.Replace(@"\\", "\\"));
+
 
             //DBtextBox.Text = (SqliteDB);
             //CameFiletextBox.Text = (DatiImpianto);
             
-            if (Settings.Default.SerialPort== "COM1")
+            if (sm.SerialPort== "COM1")
                 radioButton1.Checked = true;
-            else if (Settings.Default.SerialPort == "COM2")
+            else if (sm.SerialPort == "COM2")
                 radioButton2.Checked = true;
 
-         /*   //set dateTimePicker1 to show only time (and not the calendar)            
-            dateTimePicker1.Format = DateTimePickerFormat.Custom;
-            dateTimePicker1.CustomFormat = "HH:mm";
-            dateTimePicker1.ShowUpDown = true;*/
-
-            checkBox1.Checked = Settings.Default.Enabled;
+            checkBox1.Checked = sm.Enabled;
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -108,19 +110,18 @@ namespace Visualizzatore_ingressi_RBM21
          */
         private void button1_Click(object sender, EventArgs e)
         {
-            Settings.Default.SQLiteDatabasePath = DBtextBox.Text;
-            Settings.Default.CameRBM21FilePath = CameFiletextBox.Text;
-            
+            Debug.WriteLine(DBtextBox.Text);
+            sm.SQLiteDB = DBtextBox.Text;
+            sm.CameFilePath = CameFiletextBox.Text;
             if (radioButton1.Checked == true)
-                Settings.Default.SerialPort = "COM1";
-            else if(radioButton2.Checked == true)
-                Settings.Default.SerialPort = "COM2";
-
-            bool pastSett = Settings.Default.Enabled;
-            Settings.Default.Enabled = checkBox1.Checked;
-            if(!(pastSett == true & Settings.Default.Enabled==true))
+                sm.SerialPort = "COM1";
+            else if (radioButton2.Checked == true)
+                sm.SerialPort = "COM2";
+            bool pastSett = sm.Enabled;
+            sm.Enabled = checkBox1.Checked;
+            if (!(pastSett == true & sm.Enabled == true))
                 enableScheduledTask(checkBox1.Checked);
-            Settings.Default.Save();
+            sm.SaveSettings();
             this.Close();
         }
 

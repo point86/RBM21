@@ -115,6 +115,9 @@
     <Compile Include="..\RBM21 core\Rbm21Polling.cs">
       <Link>Rbm21Polling.cs</Link>
     </Compile>
+    <Compile Include="..\RBM21 core\SettingsManager.cs">
+      <Link>SettingsManager.cs</Link>
+    </Compile>
     <Compile Include="..\RBM21 core\Tools.cs">
       <Link>Tools.cs</Link>
     </Compile>
@@ -164,7 +167,7 @@
   <ItemGroup>
     <None Include="..\RBM21 core\Properties\Settings.settings">
       <Link>Properties\Settings.settings</Link>
-      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
       <CustomToolNamespace>RBM21_core</CustomToolNamespace>
     </None>

@@ -12,7 +12,7 @@ using System.Diagnostics;
 namespace RBM21_core
 {
     class Rbm21Polling
-    {
+    { 
         const string pathImpianto = "";
         SerialPort sp = null;
         public Rbm21Polling(string port)

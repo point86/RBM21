@@ -33,7 +33,8 @@ namespace Visualizzatore_ingressi_RBM21
             //otherwise database is ONLY READ (maybe an old database, backup, etc..).
             button1.Visible = allowedChange;
             //disable "Sincronizzazione" button, if sync is disabled (and change the tooltip text so user will be informed)
-            button1.Enabled = Settings.Default.Enabled;
+            SettingsManager sm = new SettingsManager();
+            button1.Enabled = sm.Enabled;
             if(button1.Enabled == false)            
                 toolTip1.SetToolTip(this.button1, "La sincronizzazione è disabilitata, controlla su \"Impostazioni\" nella schermata precedente");
             toolTip1.SetToolTip(this.button1, "Sincronizzazione");

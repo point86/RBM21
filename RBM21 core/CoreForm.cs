@@ -19,11 +19,12 @@ namespace RBM21_core
     {
         static System.Windows.Forms.Timer exitTimer = new System.Windows.Forms.Timer();
         static int secondsToExit = 20;
-        
+        SettingsManager sm;
+
         public CoreForm()
-        {
-            
+        {            
             InitializeComponent();
+            sm = new SettingsManager();
             Shown += PerformOperations;
         }
 
@@ -34,12 +35,11 @@ namespace RBM21_core
 
               System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;            
               String[] args = Environment.GetCommandLineArgs();
+                        
+              LogLabel.Text += "CameRBM21FilePath: " + sm.CameFilePath + "\r\n";
+              LogLabel.Text += "SQLiteDatabasePath: " + sm.SQLiteDB+ "\r\n";
 
-              LogLabel.Text += "CameRBM21FilePath: " + Settings.Default.CameRBM21FilePath + "\r\n";
-              LogLabel.Text += "SQLiteDatabasePath: " + Settings.Default.SQLiteDatabasePath + "\r\n";
-
-
-              if(CheckNeedToSync(Settings.Default.CameRBM21FilePath, Settings.Default.SQLiteDatabasePath))
+              if(CheckNeedToSync(sm.CameFilePath, sm.SQLiteDB))
                   SyncUsersTable(); 
 
               //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
@@ -95,15 +95,15 @@ namespace RBM21_core
             //update database table "users" with came's program file  (dati impianto)
         private void SyncUsersTable()
         {            
-            Tools.LogMessageToFile("CoreForm - SyncUsersTable(). CAME file: "+ Settings.Default.CameRBM21FilePath +", SQLite file: " + Settings.Default.SQLiteDatabasePath);
-            FileReader fr = new FileReader(Settings.Default.CameRBM21FilePath);
-            DBmanager dbm = new DBmanager(Settings.Default.SQLiteDatabasePath);
+            Tools.LogMessageToFile("CoreForm - SyncUsersTable(). CAME file: " + sm.CameFilePath + ", SQLite file: " + sm.SQLiteDB);
+            FileReader fr = new FileReader(sm.CameFilePath);
+            DBmanager dbm = new DBmanager(sm.SQLiteDB);
            // dbm.populateDB();
             List <User> cameList = fr.ParseFile();
             List<User> dbList = dbm.GetAllUsers();
 
-           LogLabel.Text += string.Format("Found {0} users in CAME file ({1}).\r\n", cameList.Count,  Settings.Default.CameRBM21FilePath);
-           LogLabel.Text += string.Format("Found {0} users in SQLite database ({1}).\r\n", dbList.Count, Settings.Default.SQLiteDatabasePath);
+           LogLabel.Text += string.Format("Found {0} users in CAME file ({1}).\r\n", cameList.Count, sm.CameFilePath);
+           LogLabel.Text += string.Format("Found {0} users in SQLite database ({1}).\r\n", dbList.Count, sm.SQLiteDB);
 
            Dictionary<string, User> cameUsers = cameList.ToDictionary(x => x.UserCode, x => x);
            Dictionary<string, User> dbUsers = dbList.ToDictionary(x => x.UserCode, x => x);
@@ -122,11 +122,11 @@ namespace RBM21_core
         /*update datbase table "entrances". Sync data between RBM21 and local sqlite database. */
             private void HardwareSync()
         {
-            LogLabel.Text += "Performing sync with RBM21 on "+ Settings.Default.SerialPort+ "\r\n";
-            Tools.LogMessageToFile("CoreForm - Performing sync with RBM21 on Port: " + Settings.Default.SerialPort + " SQLite file: " + Settings.Default.SQLiteDatabasePath);
+            LogLabel.Text += "Performing sync with RBM21 on "+ sm.SerialPort + "\r\n";
+            Tools.LogMessageToFile("CoreForm - Performing sync with RBM21 on Port: " + sm.SerialPort + " SQLite file: " + sm.SQLiteDB);
             
-            Rbm21Polling rbm21 = new Rbm21Polling(Settings.Default.SerialPort); //se non va e si pianta? che fffamo?
-            DBmanager dbm = new DBmanager(Settings.Default.SQLiteDatabasePath);
+            Rbm21Polling rbm21 = new Rbm21Polling(sm.SerialPort); //se non va e si pianta? che fffamo?
+            DBmanager dbm = new DBmanager(sm.SQLiteDB);
 
             List<User> rbm21List = new List<User>();
             List<User> dbList = new List<User>();

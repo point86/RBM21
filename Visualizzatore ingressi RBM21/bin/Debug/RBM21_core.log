@@ -30,3 +30,5 @@
 [09/05/2018 00:54:25] CoreForm - FINISH OPERATIONS -
 [10/05/2018 00:41:14] CoreForm --- START OPERATION ---
 [10/05/2018 00:41:14] CoreForm - Performing sync with RBM21 on Port: COM2 SQLite file: C:\\Users\\paolo\\Desktop\\cai.sqlite
+[15/05/2018 01:46:07] CoreForm --- START OPERATION ---
+[15/05/2018 01:46:07] CoreForm - SyncUsersTable(). CAME file: C:\Users\paolo\Desktop\cai - Copy.tsp, SQLite file: C:\Users\paolo\Desktop\myDatabase.sqlite
