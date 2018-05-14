@@ -94,6 +94,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Rbm21Polling.cs" />
+    <Compile Include="SettingsManager.cs" />
     <Compile Include="Tools.cs" />
     <Compile Include="User.cs" />
     <EmbeddedResource Include="CoreForm.resx">
