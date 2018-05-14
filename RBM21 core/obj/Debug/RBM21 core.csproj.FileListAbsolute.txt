@@ -22,8 +22,6 @@ C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\RBM21 core\obj\Debug\RBM21 
 C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\RBM21 core\bin\Debug\Properties\Settings.Designer.cs
 C:\Users\paolo\Desktop\Visualizzatore ingressi RBM21\RBM21 core\bin\Debug\Properties\Settings.settings
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 core.exe
-C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\Properties\Settings.Designer.cs
-C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\Properties\Settings.settings
 C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21_core.CoreForm.resources
 C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21_core.Properties.Resources.resources
 C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Debug\RBM21 core.csproj.GenerateResource.Cache
