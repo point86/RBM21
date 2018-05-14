@@ -19,6 +19,7 @@ namespace Visualizzatore_ingressi_RBM21
         public SettingsForm()
         {
             InitializeComponent();
+           
             string SqliteDB = Settings.Default.SQLiteDatabasePath;
             string DatiImpianto = Settings.Default.CameRBM21FilePath;
             DBtextBox.Text = (SqliteDB.Replace(@"\\", "\\"));
@@ -115,9 +116,11 @@ namespace Visualizzatore_ingressi_RBM21
             else if(radioButton2.Checked == true)
                 Settings.Default.SerialPort = "COM2";
 
+            bool pastSett = Settings.Default.Enabled;
             Settings.Default.Enabled = checkBox1.Checked;
-            enableScheduledTask(checkBox1.Checked);
-
+            if(!(pastSett == true & Settings.Default.Enabled==true))
+                enableScheduledTask(checkBox1.Checked);
+            Settings.Default.Save();
             this.Close();
         }
 

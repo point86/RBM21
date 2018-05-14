@@ -1,13 +1,17 @@
-C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.csprojResolveAssemblyReference.cache
-C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21_core.CoreForm.resources
-C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21_core.Properties.Resources.resources
-C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.csproj.GenerateResource.Cache
-C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.csproj.CoreCompileInputs.cache
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\Properties\Settings.Designer.cs
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\Properties\Settings.settings
+C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\RBM21 core.exe.manifest
+C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\RBM21 core.application
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\RBM21 core.exe
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\RBM21 core.pdb
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\System.Data.SQLite.dll
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\System.Data.SQLite.xml
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21_core.CoreForm.resources
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21_core.Properties.Resources.resources
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.csproj.GenerateResource.Cache
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.csproj.CoreCompileInputs.cache
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.exe.manifest
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.application
 C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.exe
 C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.pdb
+C:\Users\paolo\Desktop\RBM21\RBM21 core\obj\Release\RBM21 core.csprojResolveAssemblyReference.cache
