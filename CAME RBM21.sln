@@ -11,6 +11,9 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RBM21 core", "RBM21 core\RBM21 core.csproj", "{F464EE31-8F17-47D3-AD4C-82518B71A77C}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonFile", "CommonFile", "{E6D7A3D1-1BF2-4C21-B6DA-3DCDFD67CDC2}"
+	ProjectSection(SolutionItems) = preProject
+		Visualizzatore ingressi RBM21\bin\Debug\RBM21CoreSettings.conf = Visualizzatore ingressi RBM21\bin\Debug\RBM21CoreSettings.conf
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{A4C01BDA-3986-43E9-9C54-1FE9DDBA9D86}"
 	ProjectSection(SolutionItems) = preProject
@@ -48,6 +51,7 @@ Global
 		{C1C782F1-FD23-4251-ABD0-F500CB1393E8}.Release|Any CPU.ActiveCfg = Release
 		{C1C782F1-FD23-4251-ABD0-F500CB1393E8}.Release|Any CPU.Build.0 = Release
 		{C1C782F1-FD23-4251-ABD0-F500CB1393E8}.Release|x86.ActiveCfg = Release
+		{C1C782F1-FD23-4251-ABD0-F500CB1393E8}.Release|x86.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

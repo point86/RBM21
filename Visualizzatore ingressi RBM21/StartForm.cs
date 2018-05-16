@@ -26,7 +26,8 @@ namespace Visualizzatore_ingressi_RBM21
             */
 
             //modal dialog. Open new form (with focus). Old form still visible but can't be clicked.
-            using (ViewerForm newForm = new ViewerForm(true, Settings.Default.SQLiteDatabasePath))
+            SettingsManager sm = new SettingsManager();
+            using (ViewerForm newForm = new ViewerForm(true, sm.SQLiteDB))
             {
                 newForm.ShowDialog(this);
             }

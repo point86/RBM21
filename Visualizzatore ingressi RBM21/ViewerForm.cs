@@ -40,8 +40,8 @@ namespace Visualizzatore_ingressi_RBM21
             toolTip1.SetToolTip(this.button1, "Sincronizzazione");
           
             //last column width will fit the parent object.
-             usersListView.AutoResizeColumn(3,ColumnHeaderAutoResizeStyle.HeaderSize);
-            
+            usersListView.AutoResizeColumn(3,ColumnHeaderAutoResizeStyle.HeaderSize);
+            entranceList.AutoResizeColumn(0, ColumnHeaderAutoResizeStyle.HeaderSize);
         }
         private void dataLoader(string databasePath)
         {
@@ -113,8 +113,8 @@ namespace Visualizzatore_ingressi_RBM21
 
             //update userInfo to show info about the selected user
             ListView.SelectedListViewItemCollection lv = this.usersListView.SelectedItems;
-            userInfo.Text = lv[0].Tag.ToString(); //cast to User?
-            
+            //userInfo.Text = lv[0].Tag.ToString(); //cast to User?
+            userInfo.Text = ((User)lv[0].Tag).ToVerticalString();
 
             User u = (User)lv[0].Tag;
 

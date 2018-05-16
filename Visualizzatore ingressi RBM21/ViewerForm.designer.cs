@@ -40,7 +40,6 @@ namespace Visualizzatore_ingressi_RBM21
             this.label2 = new System.Windows.Forms.Label();
             this.entranceList = new System.Windows.Forms.ListView();
             this.Data = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.random_clo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.label3 = new System.Windows.Forms.Label();
             this.userInfo = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -96,7 +95,7 @@ namespace Visualizzatore_ingressi_RBM21
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(6, 31);
+            this.label2.Location = new System.Drawing.Point(22, 45);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 13);
             this.label2.TabIndex = 6;
@@ -105,14 +104,13 @@ namespace Visualizzatore_ingressi_RBM21
             // entranceList
             // 
             this.entranceList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.Data,
-            this.random_clo});
+            this.Data});
             this.entranceList.FullRowSelect = true;
             this.entranceList.GridLines = true;
-            this.entranceList.Location = new System.Drawing.Point(40, 179);
+            this.entranceList.Location = new System.Drawing.Point(291, 61);
             this.entranceList.MultiSelect = false;
             this.entranceList.Name = "entranceList";
-            this.entranceList.Size = new System.Drawing.Size(461, 328);
+            this.entranceList.Size = new System.Drawing.Size(208, 446);
             this.entranceList.TabIndex = 7;
             this.toolTip1.SetToolTip(this.entranceList, "Ingressi effettuati dall\'utente");
             this.entranceList.UseCompatibleStateImageBehavior = false;
@@ -124,15 +122,10 @@ namespace Visualizzatore_ingressi_RBM21
             this.Data.Text = "Data";
             this.Data.Width = 130;
             // 
-            // random_clo
-            // 
-            this.random_clo.Text = "Colonna a caso";
-            this.random_clo.Width = 105;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(6, 147);
+            this.label3.Location = new System.Drawing.Point(288, 45);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(90, 13);
             this.label3.TabIndex = 8;
@@ -140,11 +133,11 @@ namespace Visualizzatore_ingressi_RBM21
             // 
             // userInfo
             // 
-            this.userInfo.Location = new System.Drawing.Point(40, 47);
+            this.userInfo.Location = new System.Drawing.Point(25, 61);
             this.userInfo.Multiline = true;
             this.userInfo.Name = "userInfo";
             this.userInfo.ReadOnly = true;
-            this.userInfo.Size = new System.Drawing.Size(461, 73);
+            this.userInfo.Size = new System.Drawing.Size(224, 266);
             this.userInfo.TabIndex = 9;
             this.toolTip1.SetToolTip(this.userInfo, "Dettaglio utente");
             this.userInfo.TextChanged += new System.EventHandler(this.userInfo_TextChanged);
@@ -207,13 +200,13 @@ namespace Visualizzatore_ingressi_RBM21
             // button1
             // 
             this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
-            this.button1.Location = new System.Drawing.Point(717, 21);
+            this.button1.Location = new System.Drawing.Point(851, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(163, 48);
             this.button1.TabIndex = 13;
             this.button1.Text = "Sincronizza con RBM21";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.toolTip1.SetToolTip(this.button1, "Scarica i dati da RBM21 aggiornando il database");
+            this.toolTip1.SetToolTip(this.button1, "Avvia sincronizzazione con il dispositivo RBM21 ed aggiorna il database");
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -226,6 +219,7 @@ namespace Visualizzatore_ingressi_RBM21
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.usersListView);
             this.Controls.Add(this.groupBox1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ViewerForm";
             this.Text = "Visualizzatore ingressi RBM21";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -259,7 +253,6 @@ namespace Visualizzatore_ingressi_RBM21
         private System.Windows.Forms.ColumnHeader columnHeader3;
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader Data;
-        private System.Windows.Forms.ColumnHeader random_clo;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.StatusStrip statusStrip1;

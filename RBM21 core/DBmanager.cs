@@ -49,7 +49,8 @@ namespace RBM21_core
 
         public List<User> GetAllUsers() {
             List<User> result = new List<User>();
-            string sql = "select * from users;";
+            //string sql = "select * from users;";
+            string sql = "select * from users order by active DESC, name ASC;"; //ORDER BY rating DESC, name ASC
             SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
             SQLiteDataReader reader = command.ExecuteReader();
             if (!reader.HasRows) //fixme is it necessary?
@@ -64,7 +65,7 @@ namespace RBM21_core
                 usr.UserCode = (string)(reader["usercode"]);
                 usr.Active= (long)(reader["active"]) == 1 ? true : false;                
                 usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
-                string time = (string)reader["time"];                
+                //string time = (string)reader["time"];                
                 usr.Entrances = GetEntrances(usr.UserCode);
                 result.Add(usr);
             }
@@ -84,7 +85,8 @@ namespace RBM21_core
                 SetInactive(usercode);
 
             //TODO find if this key have another user associated, and mark him as Inactive.
-            string cmd = string.Format("insert into users (name, key, usercode, active, time, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, \"{4}\", {5})", usr.Nome, usr.Key, usr.UserCode, usr.Active? 1:0, usr.Time.ToString("yyyy-MM-dd HH:mm:ss"), usr.CreditoResiduo);
+            //string cmd = string.Format("insert into users (name, key, usercode, active, time, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, \"{4}\", {5})", usr.Nome, usr.Key, usr.UserCode, usr.Active? 1:0, usr.Time.ToString("yyyy-MM-dd HH:mm:ss"), usr.CreditoResiduo);
+            string cmd = string.Format("insert into users (name, key, usercode, active, time, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4})", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo);
             command = new SQLiteCommand(cmd, dbConnection);
             int rows = command.ExecuteNonQuery();
             Tools.LogMessageToFile(String.Format("DBmanager - AddUser \"{0}\": {1}. {2} rows affected (database: {3}).", usr.UserCode, usr.ToString(), rows, path));
@@ -227,7 +229,7 @@ namespace RBM21_core
                 users[i].Active = rnd.Next(0, 2) == 1 ? true : false;
                 users[i].Time = DateTime.Parse("1999-05-30, 22:22:22");
                 users[i].Key = (i.ToString() + nome).Substring(0, 10);
-                users[i].Position = i;
+               // users[i].Position = i;
                 users[i].UserCode = users[i].Key;
             }
 

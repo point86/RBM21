@@ -1,5 +1,3 @@
-C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\Properties\Settings.Designer.cs
-C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\Properties\Settings.settings
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\RBM21 core.exe.manifest
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\RBM21 core.application
 C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Release\RBM21 core.exe

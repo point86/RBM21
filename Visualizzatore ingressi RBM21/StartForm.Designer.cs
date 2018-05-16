@@ -49,7 +49,7 @@
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(151, 101);
             this.button3.TabIndex = 2;
-            this.button3.Text = "Visualizza Altro";
+            this.button3.Text = "Visualizza altri database";
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolTip1.SetToolTip(this.button3, "Visualizza altri database");
             this.button3.UseVisualStyleBackColor = true;
@@ -75,7 +75,7 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(153, 101);
             this.button1.TabIndex = 0;
-            this.button1.Text = "Visualizza dati correnti";
+            this.button1.Text = "Visualizza database ingressi";
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolTip1.SetToolTip(this.button1, "Visualizza i dati correnti");
             this.button1.UseVisualStyleBackColor = true;
@@ -84,7 +84,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(64, 42);
+            this.label1.Location = new System.Drawing.Point(68, 51);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(495, 26);
             this.label1.TabIndex = 4;
@@ -140,6 +140,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "StartForm";
             this.Text = "RBM21 Data Viewer";
             this.toolStrip1.ResumeLayout(false);

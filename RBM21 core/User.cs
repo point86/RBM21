@@ -14,9 +14,8 @@ namespace RBM21_core
         public int CreditoResiduo { get; set; }
         public string UserCode { get; set; }
         public bool Active { get; set; }
-        public DateTime Time { get; set; }
-        //public List<string> Entrances { get; set; }
-        public List<string> Entrances; //FIXME This is not a backing field!!!!!!
+        public DateTime Time { get; set; } //used by FileReader - RBM21Core
+        public List<string> Entrances; //user by HardwareSync() - RBM21Core
 
         public User() { //non initialized data
             this.Position = -1;
@@ -27,9 +26,9 @@ namespace RBM21_core
             this.UserCode = " --EMPTY-- ";
             this.Active = false;
         }
-        public User(int Position, string Nome, string Key, int CreditoResiduo, List<string> Entrances, string UserCode, bool Active)
+        public User(string Nome, string Key, int CreditoResiduo, List<string> Entrances, string UserCode, bool Active)
         {
-            this.Position = Position;
+        //    this.Position = Position;
             this.Nome = Nome;
             this.Key = Key;
             this.CreditoResiduo = CreditoResiduo;
@@ -38,9 +37,14 @@ namespace RBM21_core
             this.Active = Active;
         }       
         public override string ToString()
-        { //FIXME entrances are not displayed. maybe show only the last one?
-            return String.Format("Nome: {0}, Position(File): {1}, Key: {2}, Credito Residuo: {3}, Usercode (interno): \"{4}\", Active: {5}",
-                                        this.Nome, this.Position, this.Key, this.CreditoResiduo, this.UserCode, this.Active);
+        { 
+            return String.Format("Nome: {0}, Key: {1}, Credito Residuo: {2}, Usercode (interno): \"{3}\", Active: {4}",
+                                        this.Nome, this.Key, this.CreditoResiduo, this.UserCode, this.Active);
+        }
+        public string ToVerticalString()
+        { 
+            return String.Format("Nome: {0}\r\nKey: {1}\r\nCredito Residuo: {2}\r\nUsercode (interno): \"{3}\"\r\nActive: {4}",
+                                        this.Nome, this.Key, this.CreditoResiduo, this.UserCode, this.Active);
         }
     }
    
