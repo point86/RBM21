@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RBM21 core.exe" size="115664">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="RBM21 core.exe" size="116176">
       <assemblyIdentity name="RBM21 core" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>AppXn399ZX/mp9w1h1crlJEOnJOGOAYK0xvRSY3yHUM=</dsig:DigestValue>
+        <dsig:DigestValue>dq1QD59VgnwEm9OcPtSTMUtwRDcbAG+zYgTMJzmi710=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

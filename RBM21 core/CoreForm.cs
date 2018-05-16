@@ -32,7 +32,7 @@ namespace RBM21_core
         private void PerformOperations(object sender, EventArgs e)
         {
               Tools.LogMessageToFile("CoreForm --- START OPERATION ---");
-
+              Tools.LogSizeManager(); //if size of log file is too much (bigger than 100000 lines), cut file in half.
               System.AppDomain.CurrentDomain.UnhandledException += UnhandledExceptionTrapper;            
               String[] args = Environment.GetCommandLineArgs();
                         

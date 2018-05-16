@@ -13,7 +13,8 @@ namespace RBM21_core
         public Tools() { } //FIXME è necessario? questa classe non deve essere istanziata.
         public static void LogMessageToFile(string msg)
         {
-            System.IO.StreamWriter sw = System.IO.File.AppendText(AppDomain.CurrentDomain.BaseDirectory + "RBM21_core.log");
+            string path = AppDomain.CurrentDomain.BaseDirectory + "RBM21_core.log";
+            System.IO.StreamWriter sw = System.IO.File.AppendText(path);
             
             try
             {                
@@ -25,6 +26,19 @@ namespace RBM21_core
                 sw.Close();
             }
         }
-
+        /* If size of Log file is too much bigger (bigger than 10000 lines), throw away first 5000 lines         
+         */ 
+        public static void LogSizeManager()
+        {
+            string path = AppDomain.CurrentDomain.BaseDirectory + "RBM21_core.log";
+            var lineCount = File.ReadLines(path).Count();
+            if (lineCount > 100000)
+            {
+                string[] allLines = File.ReadAllLines(path);
+                string[] LastHalfLines = allLines.Skip(allLines.Length / 2).ToArray();
+                File.WriteAllLines(path, LastHalfLines);
+            }
+            LogMessageToFile("------ LogSizeManager: successfully deleted first 50000 lines of this file. ------");
+        }
     }
 }
