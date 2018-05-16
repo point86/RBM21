@@ -49,6 +49,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.btnCreateNew = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -181,7 +182,7 @@
             this.button3.Size = new System.Drawing.Size(50, 20);
             this.button3.TabIndex = 11;
             this.button3.Text = "Cambia";
-            this.toolTip1.SetToolTip(this.button3, "Database sul quale memorizzare i dati relativi agli ingressi");
+            this.toolTip1.SetToolTip(this.button3, "Database (esistente) sul quale memorizzare i dati relativi agli ingressi");
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
@@ -244,12 +245,24 @@
             this.linkLabel1.Text = "Task Scheduler";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
+            // btnCreateNew
+            // 
+            this.btnCreateNew.Location = new System.Drawing.Point(501, 33);
+            this.btnCreateNew.Name = "btnCreateNew";
+            this.btnCreateNew.Size = new System.Drawing.Size(84, 37);
+            this.btnCreateNew.TabIndex = 24;
+            this.btnCreateNew.Text = "Crea nuovo database";
+            this.toolTip1.SetToolTip(this.btnCreateNew, "Crea un nuovo database nel path desiderato");
+            this.btnCreateNew.UseVisualStyleBackColor = true;
+            this.btnCreateNew.Click += new System.EventHandler(this.btnCreateNew_Click);
+            // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(567, 468);
+            this.ClientSize = new System.Drawing.Size(606, 468);
+            this.Controls.Add(this.btnCreateNew);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
@@ -298,5 +311,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Button btnCreateNew;
     }
 }

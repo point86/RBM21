@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.IO;
 using RBM21_core;
 
 
@@ -173,6 +174,41 @@ namespace Visualizzatore_ingressi_RBM21
         {
             var cplPath = System.IO.Path.Combine(Environment.SystemDirectory, "control.exe");
             System.Diagnostics.Process.Start("taskschd.msc", cplPath);
+        }
+
+        private void btnCreateNew_Click(object sender, EventArgs e)
+        {
+          
+            SaveFileDialog sd = new SaveFileDialog();   
+            sd.Title = "Creazione nuovo database ingressi RBM21";
+            //sd.InitialDirectory = @"C:\";
+            sd.DefaultExt = ".sqlite";
+            sd.OverwritePrompt = false;
+            sd.Filter = "RBM21 database (*.sqlite)|*.sqlite";                      
+            if (sd.ShowDialog() == DialogResult.OK)
+            {
+                if (!File.Exists(sd.FileName))
+                {
+                    //if file didn't exists, open a new database there (DBmanager constructor will handle that)
+                    DBmanager dbm = new DBmanager(sd.FileName);
+                    dbm.Close();
+                    MessageBox.Show("Operazione completata con successo.\r\nIl database " + sd.FileName + " è stato creato.",
+                                "Operazione completata",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Information);
+                }
+                //if file aleady exists, do nothing and warn the user.
+                else
+                    MessageBox.Show("Esiste gia un database nella posizione " + sd.FileName + "\r\nPer creare un nuovo database, specificare un nuovo nome.",
+                                "Operazione non riuscita",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Error);
+
+
+            }
+                
+
+
         }
     }
 }

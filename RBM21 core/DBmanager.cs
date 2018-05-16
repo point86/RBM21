@@ -186,7 +186,7 @@ namespace RBM21_core
             return rows;
         }
 
-        private void CreateDatabase(string path)
+        public void CreateDatabase(string path)
         {
             Tools.LogMessageToFile(String.Format("DBmanager - CreateDatabase {0} .", path));
             string cmd;
