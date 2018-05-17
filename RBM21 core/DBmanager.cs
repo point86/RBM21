@@ -41,9 +41,11 @@ namespace RBM21_core
             usr.Key = (string)(reader["key"]);
             usr.UserCode = (string)(reader["usercode"]);
             usr.Active = (long)(reader["active"]) == 1 ? true : false;
-            string time = (string)reader["time"];
+            //string time = (string)reader["time"];
             usr.Entrances = GetEntrances(usr.UserCode);
             usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
+            string dt = (string)(reader["datainserimento"]);
+            usr.DataInserimento = DateTime.Parse(dt);
             return usr;
         }
 
@@ -86,6 +88,13 @@ namespace RBM21_core
             foreach (string usercode in ulist ?? Enumerable.Empty<string>())
                 SetInactive(usercode);
 
+            //if user alreay exists, update that and don't insert a new user
+            if (GetUser(usr.UserCode) != null)
+            {
+                int r = updateUser(usr, time);
+                return r;
+            }
+
             //TODO find if this key have another user associated, and mark him as Inactive.
             //string cmd = string.Format("insert into users (name, key, usercode, active, time, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, \"{4}\", {5})", usr.Nome, usr.Key, usr.UserCode, usr.Active? 1:0, usr.Time.ToString("yyyy-MM-dd HH:mm:ss"), usr.CreditoResiduo);
             //string cmd = string.Format("insert into users (name, key, usercode, active, creditoresiduo, datainserimento) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4})", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo);
@@ -103,6 +112,15 @@ namespace RBM21_core
             command = new SQLiteCommand(cmd, dbConnection);
             int rows = command.ExecuteNonQuery();
             Tools.LogMessageToFile(String.Format("DBmanager - SetInactive \"{0}\". {1} rows affected. (database: {2}).", usercode, rows, path));
+            return rows;//rows affected by the previous command (must be 1)   
+        }
+
+        public int SetActive(string usercode)
+        {
+            string cmd = string.Format("UPDATE users SET active = 1 WHERE usercode = \"{0}\";", usercode);
+            command = new SQLiteCommand(cmd, dbConnection);
+            int rows = command.ExecuteNonQuery();
+            Tools.LogMessageToFile(String.Format("DBmanager - SetActive \"{0}\". {1} rows affected. (database: {2}).", usercode, rows, path));
             return rows;//rows affected by the previous command (must be 1)   
         }
 
@@ -169,11 +187,39 @@ namespace RBM21_core
                 }
                 return result;
         }
+        public List<User> GetInactiveUsers()
+        {
+            List<User> result = new List<User>();
+            string sql = "SELECT * FROM USERS WHERE active=0;";
+            SQLiteCommand command = new SQLiteCommand(sql, dbConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            if (!reader.HasRows) //fixme is it necessary?
+                return result;
+
+            User usr;
+            while (reader.Read())
+            {
+                usr = new User();
+                usr.Nome = (string)(reader["name"]);
+                usr.Key = (string)(reader["key"]);
+                usr.UserCode = (string)(reader["usercode"]);
+                usr.Active = (long)(reader["active"]) == 1 ? true : false;
+                usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
+                // string time = (string)(reader["time"]);
+                usr.Entrances = GetEntrances(usr.UserCode);
+                //usr.Time = DateTime.Parse(time);
+                string dt = (string)(reader["datainserimento"]);
+                usr.DataInserimento = DateTime.Parse(dt);
+                result.Add(usr);
+            }
+            return result;
+        }
 
         //given User usr (identified by usr.usercode), update user associated.
-        public int updateUser(User usr)
+        public int updateUser(User usr, DateTime updTime)
         {            
-            string cmd = string.Format("UPDATE users SET name = \"{0}\", key = \"{1}\", usercode = \"{2}\", active = {3}, creditoresiduo = {4} WHERE usercode = \"{5}\";", usr.Nome, usr.Key, usr.UserCode, usr.Active?1:0, usr.CreditoResiduo, usr.UserCode);
+            string cmd = string.Format("UPDATE users SET name = \"{0}\", key = \"{1}\", usercode = \"{2}\", active = {3}, creditoresiduo = {4},  datainserimento = \"{5}\" WHERE usercode = \"{6}\";", usr.Nome, usr.Key, usr.UserCode, usr.Active?1:0, usr.CreditoResiduo, updTime.ToString("yyyy-MM-dd HH:mm:ss"), usr.UserCode);
+            //string cmd = string.Format("insert into users (name, key, usercode, active, creditoresiduo, datainserimento) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4}, \"{5}\")", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo, time.);
             command = new SQLiteCommand(cmd, dbConnection);
             int rows = command.ExecuteNonQuery();
             Tools.LogMessageToFile(String.Format("DBmanager - updateUser \"{0}\":  {1}. {2} rows affected (database: {3}).", usr.UserCode, usr.ToString(), rows, path));

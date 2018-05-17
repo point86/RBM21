@@ -40,10 +40,11 @@ namespace RBM21_core
               LogLabel.Text += "SQLiteDatabasePath: " + sm.SQLiteDB+ "\r\n";
 
               //if(CheckNeedToSync(sm.CameFilePath, sm.SQLiteDB))
-              SyncUsersTable(); 
+             // SyncUsersTable();
+              SyncUsersTable2();
 
-              //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
-              if (args.Length == 2 && args[1] == "hardwaresync")
+            //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
+            if (args.Length == 2 && args[1] == "hardwaresync")
                   HardwareSync();
 
               LogLabel.Text += "\r\n - OPERATIONS COMPLETED -";
@@ -89,10 +90,37 @@ namespace RBM21_core
             button1.Text = "Close (" + secondsToExit + ")";
             secondsToExit--;
             exitTimer.Start();
-        }        
+        }
 
+        //update database table "users" with came's program file  (dati impianto)
+        private void SyncUsersTable2()
+        {
+            Tools.LogMessageToFile("CoreForm - SyncUsersTable(). CAME file: " + sm.CameFilePath + ", SQLite file: " + sm.SQLiteDB);
+            FileReader fr = new FileReader(sm.CameFilePath);
+            DBmanager dbm = new DBmanager(sm.SQLiteDB);
+            // dbm.populateDB();
+            List<User> cameList = fr.ParseFile();
+            List<User> dbList = dbm.GetActiveUsers();
 
-            //update database table "users" with came's program file  (dati impianto)
+            LogLabel.Text += string.Format("Found {0} users in CAME file ({1}).\r\n", cameList.Count, sm.CameFilePath);
+            LogLabel.Text += string.Format("Found {0} users in SQLite database ({1}).\r\n", dbList.Count, sm.SQLiteDB);
+
+            Dictionary<string, User> cameUsers = cameList.ToDictionary(x => x.UserCode, x => x);
+            Dictionary<string, User> dbUsers = dbList.ToDictionary(x => x.UserCode, x => x);
+
+            //users that have to be ADDED to sqlite
+            List<User> ToAdd = new List<User>();
+            foreach (string usercode in cameUsers.Keys) //cameUsers is a Dictionary where the Keys are UserCode values.
+                if (!dbUsers.ContainsKey(usercode))
+                {
+                    LogLabel.Text += "Added user \"" + usercode + "\" to SQLite user table.\r\n";
+                    //dbm.AddUser(cameUsers[usercode]);
+                    dbm.AddUser(cameUsers[usercode], DateTime.Now);
+                }
+            dbm.Close();
+        }
+
+        //update database table "users" with came's program file  (dati impianto)
         private void SyncUsersTable()
         {            
             Tools.LogMessageToFile("CoreForm - SyncUsersTable(). CAME file: " + sm.CameFilePath + ", SQLite file: " + sm.SQLiteDB);
@@ -113,7 +141,7 @@ namespace RBM21_core
             foreach (string usercode in cameUsers.Keys) //cameUsers is a Dictionary where the Keys are UserCode values.
                 if (!dbUsers.ContainsKey(usercode))
                 {
-                    LogLabel.Text += "Add \"" + usercode + "\" to SQLite user table.\r\n";
+                    LogLabel.Text += "Added user \"" + usercode + "\" to SQLite user table.\r\n";
                     //dbm.AddUser(cameUsers[usercode]);
                     dbm.AddUser(cameUsers[usercode], DateTime.Now);
                 }
