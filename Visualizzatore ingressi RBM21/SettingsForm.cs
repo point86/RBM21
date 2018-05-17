@@ -24,6 +24,12 @@ namespace Visualizzatore_ingressi_RBM21
             /*
             string SqliteDB = Settings.Default.SQLiteDatabasePath;
             string DatiImpianto = Settings.Default.CameRBM21FilePath;*/
+            if (!IsAdministrator())
+            {
+                DisableAll();
+                labelWarning.Visible = true;
+                linkLabel2.Visible = true;
+            }
 
             sm = new SettingsManager();
             string SqliteDB = sm.SQLiteDB;
@@ -45,25 +51,31 @@ namespace Visualizzatore_ingressi_RBM21
             checkBox1.Checked = sm.Enabled;
         }
 
+        private void DisableAll()
+        {
+            radioButton1.Enabled = false;
+            radioButton2.Enabled = false;
+            DBtextBox.Enabled = false;
+            CameFiletextBox.Enabled = false;
+            button3.Enabled = false;
+            button4.Enabled = false;
+            btnCreateNew.Enabled = false;
+            checkBox1.Enabled = false;
+            button1.Enabled = false;
+            //label6.Enabled = false;
+
+        }
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             if (checkBox1.Checked)
-            {
-                label2.Visible = false;
-                //   Settings.Default.Enabled = true; //FIXME uncomment!!
-                //TODO inert here code for core program, must be ENABLED
-            }
-            else
-            {                
-                label2.Visible = true;
-                //Settings.Default.Enabled = false; //FIXME uncomment!!
-                //TODO inert here code for core program, must be disaBLED
-            }
+                label2.Visible = false;            
+            else                         
+                label2.Visible = true;                
         }
 
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
-            //textBox2.DataBindings.
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -107,23 +119,12 @@ namespace Visualizzatore_ingressi_RBM21
 
         }
 
+
         /*
          * Retrieve new setting from this form (SettingsForm) and save to c# standard NET settings.
          */
         private void button1_Click(object sender, EventArgs e)
-        {
-
-            bool isAdmin = IsAdministrator();
-            if (!isAdmin)
-            {
-                MessageBox.Show("Per modificare le impostazioni di funzionamento è necessario che \"Visualizzatore ingressi RBM21\" sia eseguito con i permessi di \"Administratore\".\r\nPer eseguire questo programma con i diritti di Amministratore, fare click con il tasto destro del mouse nell'icona di avvio del programma e scegliere -> Proprietà -> Compatibilità -> Esegui come amministratore -> OK.",
-                                "Impossibile applicare le modifiche.",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Exclamation);
-                                this.Close();
-            }
-
-            Debug.WriteLine(DBtextBox.Text);
+        {         
             sm.SQLiteDB = DBtextBox.Text;
             sm.CameFilePath = CameFiletextBox.Text;
             if (radioButton1.Checked == true)
@@ -227,12 +228,12 @@ namespace Visualizzatore_ingressi_RBM21
                                 "Operazione non riuscita",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Error);
+            }               
+        }
 
-
-            }
-                
-
-
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            MessageBox.Show("Per eseguire questo programma in modalità amministratore, fare click con il tasto destro del mouse sull'icona del programma e sceglire: Proprietà -> Compatibilità. A questo punto abilitare \"Esegui come amministratore\" e confermare con OK");
         }
     }
 }

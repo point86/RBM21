@@ -50,17 +50,18 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label7 = new System.Windows.Forms.Label();
+            this.labelWarning = new System.Windows.Forms.Label();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // DBtextBox
             // 
             this.DBtextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.DBtextBox.Location = new System.Drawing.Point(180, 41);
+            this.DBtextBox.Location = new System.Drawing.Point(179, 78);
             this.DBtextBox.Name = "DBtextBox";
             this.DBtextBox.ReadOnly = true;
-            this.DBtextBox.Size = new System.Drawing.Size(243, 20);
+            this.DBtextBox.Size = new System.Drawing.Size(298, 20);
             this.DBtextBox.TabIndex = 0;
             this.toolTip1.SetToolTip(this.DBtextBox, "Database sul quale memorizzare i dati relativi agli ingressi");
             this.DBtextBox.TextChanged += new System.EventHandler(this.DBtextBox_TextChanged);
@@ -68,7 +69,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(81, 44);
+            this.label1.Location = new System.Drawing.Point(80, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 13);
             this.label1.TabIndex = 1;
@@ -100,7 +101,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(116, 84);
+            this.label3.Location = new System.Drawing.Point(115, 121);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(56, 13);
             this.label3.TabIndex = 5;
@@ -110,10 +111,10 @@
             // CameFiletextBox
             // 
             this.CameFiletextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.CameFiletextBox.Location = new System.Drawing.Point(180, 80);
+            this.CameFiletextBox.Location = new System.Drawing.Point(179, 117);
             this.CameFiletextBox.Name = "CameFiletextBox";
             this.CameFiletextBox.ReadOnly = true;
-            this.CameFiletextBox.Size = new System.Drawing.Size(243, 20);
+            this.CameFiletextBox.Size = new System.Drawing.Size(298, 20);
             this.CameFiletextBox.TabIndex = 6;
             this.toolTip1.SetToolTip(this.CameFiletextBox, "File contenente di dati impianto di RBM21 (generalemente in C:\\Programmi\\RBM21)");
             this.CameFiletextBox.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
@@ -122,7 +123,7 @@
             // 
             this.groupBox1.Controls.Add(this.radioButton1);
             this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Location = new System.Drawing.Point(233, 127);
+            this.groupBox1.Location = new System.Drawing.Point(286, 164);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(190, 54);
             this.groupBox1.TabIndex = 7;
@@ -134,8 +135,9 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(171, 301);
+            this.checkBox1.Location = new System.Drawing.Point(224, 247);
             this.checkBox1.Name = "checkBox1";
+            this.checkBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.checkBox1.Size = new System.Drawing.Size(224, 17);
             this.checkBox1.TabIndex = 8;
             this.checkBox1.Text = "Abilita sincronizzazione automatica";
@@ -148,7 +150,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(53, 348);
+            this.label2.Location = new System.Drawing.Point(115, 358);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(481, 16);
             this.label2.TabIndex = 9;
@@ -157,7 +159,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(308, 384);
+            this.button1.Location = new System.Drawing.Point(404, 391);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(114, 30);
             this.button1.TabIndex = 10;
@@ -168,7 +170,7 @@
             // button2
             // 
             this.button2.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.button2.Location = new System.Drawing.Point(429, 385);
+            this.button2.Location = new System.Drawing.Point(525, 392);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(114, 29);
             this.button2.TabIndex = 0;
@@ -178,7 +180,7 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(429, 41);
+            this.button3.Location = new System.Drawing.Point(483, 77);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 20);
             this.button3.TabIndex = 11;
@@ -189,7 +191,7 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(429, 79);
+            this.button4.Location = new System.Drawing.Point(483, 115);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 20);
             this.button4.TabIndex = 12;
@@ -201,14 +203,14 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(300, 305);
+            this.label5.Location = new System.Drawing.Point(353, 342);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 16;
             // 
             // btnCreateNew
             // 
-            this.btnCreateNew.Location = new System.Drawing.Point(501, 33);
+            this.btnCreateNew.Location = new System.Drawing.Point(555, 69);
             this.btnCreateNew.Name = "btnCreateNew";
             this.btnCreateNew.Size = new System.Drawing.Size(84, 37);
             this.btnCreateNew.TabIndex = 24;
@@ -219,7 +221,7 @@
             // 
             // label8
             // 
-            this.label8.Location = new System.Drawing.Point(43, 137);
+            this.label8.Location = new System.Drawing.Point(96, 174);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(184, 35);
             this.label8.TabIndex = 19;
@@ -230,14 +232,14 @@
             // 
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label4.Location = new System.Drawing.Point(34, 284);
+            this.label4.Location = new System.Drawing.Point(87, 343);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(500, 2);
             this.label4.TabIndex = 20;
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(53, 194);
+            this.label6.Location = new System.Drawing.Point(105, 267);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(428, 60);
             this.label6.TabIndex = 21;
@@ -249,31 +251,50 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(397, 254);
+            this.linkLabel1.Location = new System.Drawing.Point(505, 314);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(82, 13);
             this.linkLabel1.TabIndex = 23;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Task Scheduler";
+            this.toolTip1.SetToolTip(this.linkLabel1, "Windows Task Scheduler");
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // label7
+            // labelWarning
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(50, 320);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(534, 13);
-            this.label7.TabIndex = 25;
-            this.label7.Text = "Perchè la modifica abbia effetto è NECESSARIO che il programma sia stato avviato " +
-    "con i diritti di amministratore.";
+            this.labelWarning.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelWarning.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.labelWarning.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.labelWarning.ImageKey = "(none)";
+            this.labelWarning.Location = new System.Drawing.Point(-8, 9);
+            this.labelWarning.Name = "labelWarning";
+            this.labelWarning.Size = new System.Drawing.Size(647, 43);
+            this.labelWarning.TabIndex = 26;
+            this.labelWarning.Text = "Attenzione! La modifica delle impostazioni è disabilitata. Per abilitarla eseguir" +
+    "e questo programma con i permessi di amministratore.";
+            this.labelWarning.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelWarning.Visible = false;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(522, 41);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(105, 13);
+            this.linkLabel2.TabIndex = 27;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Maggiori informazioni";
+            this.linkLabel2.Visible = false;
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
             // SettingsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
-            this.ClientSize = new System.Drawing.Size(606, 468);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(651, 434);
+            this.Controls.Add(this.linkLabel2);
+            this.Controls.Add(this.labelWarning);
             this.Controls.Add(this.btnCreateNew);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
@@ -293,7 +314,7 @@
             this.Controls.Add(this.DBtextBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SettingsForm";
-            this.Text = "SettingsForm";
+            this.Text = "Impostazioni";
             this.Load += new System.EventHandler(this.SettingsForm_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -324,6 +345,7 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnCreateNew;
-        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label labelWarning;
+        private System.Windows.Forms.LinkLabel linkLabel2;
     }
 }
