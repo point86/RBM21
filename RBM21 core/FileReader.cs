@@ -66,6 +66,7 @@ namespace RBM21_core
             s = s.Replace(";", ""); //remove ' character, otherwise sqlite will fail.
             s = s.Replace(":", ""); //remove ' character, otherwise sqlite will fail.
             s = s.Replace(".", ""); //remove ' character, otherwise sqlite will fail.
+            s = s.Replace(",", ""); //remove ' character, otherwise sqlite will fail.
             usr.Nome = s;
 
             sr.ReadLine(); //FIXME this would be W0 (=89), is that useless?
