@@ -55,14 +55,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Visualizzatore ingressi RBM21.exe" size="540624">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Visualizzatore ingressi RBM21.exe" size="541136">
       <assemblyIdentity name="Visualizzatore ingressi RBM21" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>sAybh5O2Me8eQoMp9Ie9WIoWsi1K3i7eniTV12ptG/Q=</dsig:DigestValue>
+        <dsig:DigestValue>HuTgtqFEWQJkX6Dof3z5V6AmRGEfzrPCDmIufDeASqs=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
