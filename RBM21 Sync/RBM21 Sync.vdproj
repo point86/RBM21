@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_075FCC5BBB68422DBCA2A5DBF2ECB915"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_14AF3711D61F92C1BA6A2D6B2E3EF8AF"
         "OwnerKey" = "8:_06DFD8BC99F948E6A39C234CCD095E02"
         "MsmSig" = "8:_UNDEFINED"
@@ -39,13 +33,13 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_28B76AF1011448B1AB5F32CF3061AD85"
+        "MsmKey" = "8:_2072DA8D730B4A679A9B86B676690122"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_58772A01711143F99883F398B1B1C1C6"
+        "MsmKey" = "8:_28B76AF1011448B1AB5F32CF3061AD85"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -64,6 +58,12 @@
         "Entry"
         {
         "MsmKey" = "8:_C45CCB79F657453FB906870C40324264"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_DB24EBCD305345A5930B7D9887F43E45"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -116,6 +116,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.6.1"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.6.1 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.6.1"
+                    }
+                }
             }
         }
         "Release"
@@ -178,26 +186,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_075FCC5BBB68422DBCA2A5DBF2ECB915"
-            {
-            "SourcePath" = "8:..\\..\\Selected icons\\key.ico"
-            "TargetName" = "8:key.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_E6014401C5B4485D95172246EAD804D6"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_14AF3711D61F92C1BA6A2D6B2E3EF8AF"
             {
             "AssemblyRegister" = "3:1"
@@ -229,10 +217,10 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_58772A01711143F99883F398B1B1C1C6"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_2072DA8D730B4A679A9B86B676690122"
             {
-            "SourcePath" = "8:..\\..\\Selected icons\\keySinc.ico"
-            "TargetName" = "8:keySinc.ico"
+            "SourcePath" = "8:..\\icons\\keyBlueUp.ico"
+            "TargetName" = "8:keyBlueUp.ico"
             "Tag" = "8:"
             "Folder" = "8:_E6014401C5B4485D95172246EAD804D6"
             "Condition" = "8:"
@@ -284,6 +272,26 @@
             {
             "SourcePath" = "8:..\\Visualizzatore ingressi RBM21\\bin\\Debug\\RBM21CoreSettings.conf"
             "TargetName" = "8:RBM21CoreSettings.conf"
+            "Tag" = "8:"
+            "Folder" = "8:_E6014401C5B4485D95172246EAD804D6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_DB24EBCD305345A5930B7D9887F43E45"
+            {
+            "SourcePath" = "8:..\\icons\\sync.ico"
+            "TargetName" = "8:sync.ico"
             "Tag" = "8:"
             "Folder" = "8:_E6014401C5B4485D95172246EAD804D6"
             "Condition" = "8:"
@@ -357,7 +365,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RBM21 Sync"
         "ProductCode" = "8:{87B91F98-7BA0-444B-A7E9-BA792D35FC60}"
-        "PackageCode" = "8:{36EDF5FC-30FD-40BC-B008-55879A1B3E0D}"
+        "PackageCode" = "8:{F0249427-89EB-4025-B724-49D0F9C5E684}"
         "UpgradeCode" = "8:{B3B62FA2-B9CE-4F58-B13F-1BF97C061A36}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -488,7 +496,7 @@
             "Target" = "8:_28B76AF1011448B1AB5F32CF3061AD85"
             "Folder" = "8:_6E37874D2D7646539795DF2320AE2098"
             "WorkingFolder" = "8:_E6014401C5B4485D95172246EAD804D6"
-            "Icon" = "8:_075FCC5BBB68422DBCA2A5DBF2ECB915"
+            "Icon" = "8:_2072DA8D730B4A679A9B86B676690122"
             "Feature" = "8:"
             }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BF684BE3866E4D2F89DA37244A5A4970"
@@ -502,7 +510,7 @@
             "Target" = "8:_28B76AF1011448B1AB5F32CF3061AD85"
             "Folder" = "8:_4385CDF4A4F84AB78D061F52F2E4A734"
             "WorkingFolder" = "8:_E6014401C5B4485D95172246EAD804D6"
-            "Icon" = "8:_075FCC5BBB68422DBCA2A5DBF2ECB915"
+            "Icon" = "8:_2072DA8D730B4A679A9B86B676690122"
             "Feature" = "8:"
             }
         }
