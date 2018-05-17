@@ -67,6 +67,8 @@ namespace RBM21_core
                 usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
                 //string time = (string)reader["time"];                
                 usr.Entrances = GetEntrances(usr.UserCode);
+                string dt = (string)(reader["datainserimento"]);
+                usr.DataInserimento = DateTime.Parse(dt);
                 result.Add(usr);
             }
             return result;
@@ -77,7 +79,7 @@ namespace RBM21_core
          * Before proceding to insert new user in database, mark as Inactive all users with the same key.
          */
 
-        public int AddUser(User usr)
+        public int AddUser(User usr, DateTime time)
         {
             var ulist = SearchByKey(usr.Key);
 
@@ -86,7 +88,8 @@ namespace RBM21_core
 
             //TODO find if this key have another user associated, and mark him as Inactive.
             //string cmd = string.Format("insert into users (name, key, usercode, active, time, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, \"{4}\", {5})", usr.Nome, usr.Key, usr.UserCode, usr.Active? 1:0, usr.Time.ToString("yyyy-MM-dd HH:mm:ss"), usr.CreditoResiduo);
-            string cmd = string.Format("insert into users (name, key, usercode, active, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4})", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo);
+            //string cmd = string.Format("insert into users (name, key, usercode, active, creditoresiduo, datainserimento) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4})", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo);
+            string cmd = string.Format("insert into users (name, key, usercode, active, creditoresiduo, datainserimento) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4}, \"{5}\")", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo, time.ToString("yyyy-MM-dd HH:mm:ss"));
             command = new SQLiteCommand(cmd, dbConnection);
             int rows = command.ExecuteNonQuery();
             Tools.LogMessageToFile(String.Format("DBmanager - AddUser \"{0}\": {1}. {2} rows affected (database: {3}).", usr.UserCode, usr.ToString(), rows, path));
@@ -159,8 +162,9 @@ namespace RBM21_core
                     usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
                    // string time = (string)(reader["time"]);
                     usr.Entrances = GetEntrances(usr.UserCode);
-                    //usr.Time = DateTime.Parse(time);
-
+                //usr.Time = DateTime.Parse(time);
+                    string dt = (string)(reader["datainserimento"]);
+                    usr.DataInserimento = DateTime.Parse(dt);
                     result.Add(usr);
                 }
                 return result;
@@ -196,7 +200,7 @@ namespace RBM21_core
             dbConnection.Open();
 
             //cmd = "CREATE TABLE users (name TEXT(100), key TEXT(10), usercode TEXT(110), active INTEGER, time TEXT(25), creditoresiduo INTEGER);";
-            cmd = "CREATE TABLE users (name TEXT(100), key TEXT(10), usercode TEXT(110), active INTEGER, creditoresiduo INTEGER);";
+            cmd = "CREATE TABLE users (name TEXT(100), key TEXT(10), usercode TEXT(110), active INTEGER, creditoresiduo INTEGER, datainserimento TEXT(25));";
             command = new SQLiteCommand(cmd, dbConnection);
             command.ExecuteNonQuery();
 
@@ -208,6 +212,7 @@ namespace RBM21_core
 
 
         /* Populate Database with 55 random users (with entrances). */
+        
         public void populateDB()
         {
             Tools.LogMessageToFile("DBmanager - populateDB()");
@@ -238,7 +243,7 @@ namespace RBM21_core
             int z = 0;
             foreach (User usr in users)
             {                
-                AddUser(usr);
+                AddUser(usr, DateTime.Now);
                 Debug.WriteLine("Generating user {0} data...", z);
                 
 

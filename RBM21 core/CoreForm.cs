@@ -114,7 +114,8 @@ namespace RBM21_core
                 if (!dbUsers.ContainsKey(usercode))
                 {
                     LogLabel.Text += "Add \"" + usercode + "\" to SQLite user table.\r\n";
-                    dbm.AddUser(cameUsers[usercode]);
+                    //dbm.AddUser(cameUsers[usercode]);
+                    dbm.AddUser(cameUsers[usercode], DateTime.Now);
                 }
             dbm.Close();
         }
@@ -156,6 +157,10 @@ namespace RBM21_core
                 
                 int result = DateTime.Compare(dbTime, rbm21Time);
                 if (result >= 0) //if sqlite date is more recent than rbm21's, do nothing.
+                    continue;
+
+                int result1 = DateTime.Compare(dbUsers[key].DataInserimento, dbTime);
+                if (result1 > 0)
                     continue;
                 //else we have to upgrade "Entrances" table.
                 int r1 = dbm.AddEntrance(dbUsers[key], rbm21Users[key].Time);
