@@ -43,15 +43,18 @@ namespace RBM21_core
             else
                 Enabled = false;
         }
+        //public string SaveSettings()
         public void SaveSettings()
-        {
+        { //FIXME why return something?
             string[] lines = {
                     "CameFilePath " + this.CameFilePath,
                     "SQLiteDB " + this.SQLiteDB,
                     "SerialPort " + this.SerialPort,
                     "Enabled "  + this.Enabled.ToString()
             };
+            
             System.IO.File.WriteAllLines(path, lines);
+           // return path;
         }
     }
 }

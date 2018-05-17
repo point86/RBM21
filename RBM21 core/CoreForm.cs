@@ -39,8 +39,8 @@ namespace RBM21_core
               LogLabel.Text += "CameRBM21FilePath: " + sm.CameFilePath + "\r\n";
               LogLabel.Text += "SQLiteDatabasePath: " + sm.SQLiteDB+ "\r\n";
 
-              if(CheckNeedToSync(sm.CameFilePath, sm.SQLiteDB))
-                  SyncUsersTable(); 
+              //if(CheckNeedToSync(sm.CameFilePath, sm.SQLiteDB))
+              SyncUsersTable(); 
 
               //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
               if (args.Length == 2 && args[1] == "hardwaresync")

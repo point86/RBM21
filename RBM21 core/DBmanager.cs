@@ -86,7 +86,7 @@ namespace RBM21_core
 
             //TODO find if this key have another user associated, and mark him as Inactive.
             //string cmd = string.Format("insert into users (name, key, usercode, active, time, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, \"{4}\", {5})", usr.Nome, usr.Key, usr.UserCode, usr.Active? 1:0, usr.Time.ToString("yyyy-MM-dd HH:mm:ss"), usr.CreditoResiduo);
-            string cmd = string.Format("insert into users (name, key, usercode, active, time, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4})", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo);
+            string cmd = string.Format("insert into users (name, key, usercode, active, creditoresiduo) values (\"{0}\", \"{1}\", \"{2}\", {3}, {4})", usr.Nome, usr.Key, usr.UserCode, usr.Active ? 1 : 0, usr.CreditoResiduo);
             command = new SQLiteCommand(cmd, dbConnection);
             int rows = command.ExecuteNonQuery();
             Tools.LogMessageToFile(String.Format("DBmanager - AddUser \"{0}\": {1}. {2} rows affected (database: {3}).", usr.UserCode, usr.ToString(), rows, path));
@@ -157,7 +157,7 @@ namespace RBM21_core
                     usr.UserCode = (string)(reader["usercode"]);
                     usr.Active = (long)(reader["active"]) == 1 ? true : false;
                     usr.CreditoResiduo = (int)((long)reader["creditoresiduo"]);
-                    string time = (string)(reader["time"]);
+                   // string time = (string)(reader["time"]);
                     usr.Entrances = GetEntrances(usr.UserCode);
                     //usr.Time = DateTime.Parse(time);
 
@@ -195,7 +195,8 @@ namespace RBM21_core
             dbConnection = new SQLiteConnection("Data Source=" + path + ";Version=3;");
             dbConnection.Open();
 
-            cmd = "CREATE TABLE users (name TEXT(100), key TEXT(10), usercode TEXT(110), active INTEGER, time TEXT(25), creditoresiduo INTEGER);";
+            //cmd = "CREATE TABLE users (name TEXT(100), key TEXT(10), usercode TEXT(110), active INTEGER, time TEXT(25), creditoresiduo INTEGER);";
+            cmd = "CREATE TABLE users (name TEXT(100), key TEXT(10), usercode TEXT(110), active INTEGER, creditoresiduo INTEGER);";
             command = new SQLiteCommand(cmd, dbConnection);
             command.ExecuteNonQuery();
 

@@ -151,8 +151,10 @@ namespace Visualizzatore_ingressi_RBM21
             p.StartInfo.FileName = "schtasks";
             p.StartInfo.Arguments = strArguments;    
             p.Start();
-
-            p.WaitForExit();                   
+            p.WaitForExit();
+            /* on startup cmd will be:
+             *  Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc ONSTART   /f
+             */
         }
 
         static void DisableSync()
