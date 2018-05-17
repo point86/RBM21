@@ -45,11 +45,12 @@
             this.button4 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnCreateNew = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.btnCreateNew = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -133,7 +134,7 @@
             // 
             this.checkBox1.AutoSize = true;
             this.checkBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkBox1.Location = new System.Drawing.Point(171, 306);
+            this.checkBox1.Location = new System.Drawing.Point(171, 301);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(224, 17);
             this.checkBox1.TabIndex = 8;
@@ -147,7 +148,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Red;
-            this.label2.Location = new System.Drawing.Point(53, 336);
+            this.label2.Location = new System.Drawing.Point(53, 348);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(481, 16);
             this.label2.TabIndex = 9;
@@ -205,6 +206,17 @@
             this.label5.Size = new System.Drawing.Size(0, 13);
             this.label5.TabIndex = 16;
             // 
+            // btnCreateNew
+            // 
+            this.btnCreateNew.Location = new System.Drawing.Point(501, 33);
+            this.btnCreateNew.Name = "btnCreateNew";
+            this.btnCreateNew.Size = new System.Drawing.Size(84, 37);
+            this.btnCreateNew.TabIndex = 24;
+            this.btnCreateNew.Text = "Crea nuovo database";
+            this.toolTip1.SetToolTip(this.btnCreateNew, "Crea un nuovo database nel path desiderato");
+            this.btnCreateNew.UseVisualStyleBackColor = true;
+            this.btnCreateNew.Click += new System.EventHandler(this.btnCreateNew_Click);
+            // 
             // label8
             // 
             this.label8.Location = new System.Drawing.Point(43, 137);
@@ -245,16 +257,15 @@
             this.linkLabel1.Text = "Task Scheduler";
             this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
-            // btnCreateNew
+            // label7
             // 
-            this.btnCreateNew.Location = new System.Drawing.Point(501, 33);
-            this.btnCreateNew.Name = "btnCreateNew";
-            this.btnCreateNew.Size = new System.Drawing.Size(84, 37);
-            this.btnCreateNew.TabIndex = 24;
-            this.btnCreateNew.Text = "Crea nuovo database";
-            this.toolTip1.SetToolTip(this.btnCreateNew, "Crea un nuovo database nel path desiderato");
-            this.btnCreateNew.UseVisualStyleBackColor = true;
-            this.btnCreateNew.Click += new System.EventHandler(this.btnCreateNew_Click);
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(50, 320);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(534, 13);
+            this.label7.TabIndex = 25;
+            this.label7.Text = "Perchè la modifica abbia effetto è NECESSARIO che il programma sia stato avviato " +
+    "con i diritti di amministratore.";
             // 
             // SettingsForm
             // 
@@ -262,6 +273,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.button2;
             this.ClientSize = new System.Drawing.Size(606, 468);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnCreateNew);
             this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.label6);
@@ -312,5 +324,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.LinkLabel linkLabel1;
         private System.Windows.Forms.Button btnCreateNew;
+        private System.Windows.Forms.Label label7;
     }
 }

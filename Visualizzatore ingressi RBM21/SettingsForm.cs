@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
 using System.IO;
+using System.Security.Principal;
 using RBM21_core;
 
 
@@ -111,6 +112,17 @@ namespace Visualizzatore_ingressi_RBM21
          */
         private void button1_Click(object sender, EventArgs e)
         {
+
+            bool isAdmin = IsAdministrator();
+            if (!isAdmin)
+            {
+                MessageBox.Show("Per modificare le impostazioni di funzionamento è necessario che \"Visualizzatore ingressi RBM21\" sia eseguito con i permessi di \"Administratore\".\r\nPer eseguire questo programma con i diritti di Amministratore, fare click con il tasto destro del mouse nell'icona di avvio del programma e scegliere -> Proprietà -> Compatibilità -> Esegui come amministratore -> OK.",
+                                "Impossibile applicare le modifiche.",
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Exclamation);
+                                this.Close();
+            }
+
             Debug.WriteLine(DBtextBox.Text);
             sm.SQLiteDB = DBtextBox.Text;
             sm.CameFilePath = CameFiletextBox.Text;
@@ -122,31 +134,41 @@ namespace Visualizzatore_ingressi_RBM21
             sm.Enabled = checkBox1.Checked;
             if (!(pastSett == true & sm.Enabled == true))
                 enableScheduledTask(checkBox1.Checked);
-            sm.SaveSettings();
+            sm.SaveSettings();                   
+
             this.Close();
+        }
+        /* check if running as administrator */
+        public static bool IsAdministrator()
+        {
+            WindowsIdentity identity = WindowsIdentity.GetCurrent();
+            WindowsPrincipal principal = new WindowsPrincipal(identity);
+            return principal.IsInRole(WindowsBuiltInRole.Administrator);
         }
 
         void enableScheduledTask(bool enabled)
-        {
+        {            
             if (enabled == true)
-                EnableSync();
+                    EnableSync();
             else
-                DisableSync();
-
+                    DisableSync();           
         }
         /*
          *  Sync will be performed by "RBM21 core.exe". 
          *  Microsoft Windows have a built-in feature to run a specified task in a scheduled manner, Task Scheduler. 
          *  Tasks can be manipulated via Control Panel or with a cmd tool, schtasks, which is used in this case.
+         *  
+         *  if fail, will return false (so user is notified there is something wrong).
          */
         static void EnableSync()
         {
             //calling schtasks with appropriate cmd options
             string RBM21CorePath = AppDomain.CurrentDomain.BaseDirectory + "RBM21 core.exe";
             /* Cmd line:
-               Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc DAILY  /st 12:00:00 /f
+             * Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc DAILY  /st 12:00:00 /f
+               Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc DAILY  /st 12:00:00 /RL HIGHEST /f
             */
-            string strArguments = " /Create /tn RBM21Sync /tr \"'" + RBM21CorePath + "' hardwaresync\"  /sc DAILY  /st 12:00:00 /f";
+            string strArguments = " /Create /tn RBM21Sync /tr \"'" + RBM21CorePath + "' hardwaresync\"  /sc DAILY  /st 12:00:00  /RL HIGHEST /f";
             Process p = new Process();
             p.StartInfo.FileName = "schtasks";
             p.StartInfo.Arguments = strArguments;    
@@ -154,7 +176,7 @@ namespace Visualizzatore_ingressi_RBM21
             p.WaitForExit();
             /* on startup cmd will be:
              *  Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc ONSTART   /f
-             */
+             */            
         }
 
         static void DisableSync()
