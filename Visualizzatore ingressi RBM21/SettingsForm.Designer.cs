@@ -46,10 +46,10 @@
             this.label5 = new System.Windows.Forms.Label();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.btnCreateNew = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label8 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.labelWarning = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.groupBox1.SuspendLayout();
@@ -182,7 +182,7 @@
             // 
             this.button3.Location = new System.Drawing.Point(483, 77);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(50, 20);
+            this.button3.Size = new System.Drawing.Size(50, 22);
             this.button3.TabIndex = 11;
             this.button3.Text = "Cambia";
             this.toolTip1.SetToolTip(this.button3, "Database (esistente) sul quale memorizzare i dati relativi agli ingressi");
@@ -210,14 +210,26 @@
             // 
             // btnCreateNew
             // 
-            this.btnCreateNew.Location = new System.Drawing.Point(555, 69);
+            this.btnCreateNew.Location = new System.Drawing.Point(539, 77);
             this.btnCreateNew.Name = "btnCreateNew";
-            this.btnCreateNew.Size = new System.Drawing.Size(84, 37);
+            this.btnCreateNew.Size = new System.Drawing.Size(70, 21);
             this.btnCreateNew.TabIndex = 24;
-            this.btnCreateNew.Text = "Crea nuovo database";
+            this.btnCreateNew.Text = "Crea nuovo";
             this.toolTip1.SetToolTip(this.btnCreateNew, "Crea un nuovo database nel path desiderato");
             this.btnCreateNew.UseVisualStyleBackColor = true;
             this.btnCreateNew.Click += new System.EventHandler(this.btnCreateNew_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(505, 314);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(82, 13);
+            this.linkLabel1.TabIndex = 23;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Task Scheduler";
+            this.toolTip1.SetToolTip(this.linkLabel1, "Windows Task Scheduler");
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label8
             // 
@@ -247,18 +259,6 @@
     "cale (su computer) è  modificabile tramite il \"Task Scheduler\" di Windows. Il ta" +
     "sk responsabile è \"RBM21Sync\".";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(505, 314);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(82, 13);
-            this.linkLabel1.TabIndex = 23;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Task Scheduler";
-            this.toolTip1.SetToolTip(this.linkLabel1, "Windows Task Scheduler");
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // labelWarning
             // 

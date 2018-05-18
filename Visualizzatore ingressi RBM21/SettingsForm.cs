@@ -217,7 +217,7 @@ namespace Visualizzatore_ingressi_RBM21
                     //if file didn't exists, open a new database there (DBmanager constructor will handle that)
                     DBmanager dbm = new DBmanager(sd.FileName);
                     dbm.Close();
-                    MessageBox.Show("Operazione completata con successo.\r\nIl database " + sd.FileName + " è stato creato.",
+                    MessageBox.Show("Operazione completata con successo.\r\nIl database " + sd.FileName + " è stato creato. Per utilizzarlo, utilizzare il pulsante \"cambia\".",
                                 "Operazione completata",
                                 MessageBoxButtons.OK,
                                 MessageBoxIcon.Information);

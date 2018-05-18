@@ -39,12 +39,12 @@ namespace RBM21_core
               LogLabel.Text += "CameRBM21FilePath: " + sm.CameFilePath + "\r\n";
               LogLabel.Text += "SQLiteDatabasePath: " + sm.SQLiteDB+ "\r\n";
 
-              //if(CheckNeedToSync(sm.CameFilePath, sm.SQLiteDB))
-             // SyncUsersTable();
-              SyncUsersTable2();
+            //if(CheckNeedToSync(sm.CameFilePath, sm.SQLiteDB))
+            // SyncUsersTable();
+            SyncUsersTable2();
 
             //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
-            if (args.Length == 2 && args[1] == "hardwaresync")
+            if (args.Length >= 2 && args[1] == "hardwaresync")
                   HardwareSync();
 
               LogLabel.Text += "\r\n - OPERATIONS COMPLETED -";
@@ -54,7 +54,6 @@ namespace RBM21_core
               exitTimer.Start();
 
               Tools.LogMessageToFile("CoreForm - FINISH OPERATIONS -");             
-
         }
         static void UnhandledExceptionTrapper(object sender, UnhandledExceptionEventArgs e)
         {
@@ -96,8 +95,10 @@ namespace RBM21_core
         private void SyncUsersTable2()
         {
             Tools.LogMessageToFile("CoreForm - SyncUsersTable(). CAME file: " + sm.CameFilePath + ", SQLite file: " + sm.SQLiteDB);
+            DateTime cameFileDate = System.IO.File.GetLastWriteTime(sm.CameFilePath);
             FileReader fr = new FileReader(sm.CameFilePath);
             DBmanager dbm = new DBmanager(sm.SQLiteDB);
+            //DBmanager dbm = new DBmanager(@"C:\Users\paolo\Desktop\2018.sqlite");
             // dbm.populateDB();
             List<User> cameList = fr.ParseFile();
             List<User> dbList = dbm.GetActiveUsers();
@@ -115,7 +116,8 @@ namespace RBM21_core
                 {
                     LogLabel.Text += "Added user \"" + usercode + "\" to SQLite user table.\r\n";
                     //dbm.AddUser(cameUsers[usercode]);
-                    dbm.AddUser(cameUsers[usercode], DateTime.Now);
+                    //dbm.AddUser(cameUsers[usercode], DateTime.Now);
+                    dbm.AddUser(cameUsers[usercode], cameFileDate);                   
                 }
             dbm.Close();
         }
@@ -156,12 +158,19 @@ namespace RBM21_core
             
             Rbm21Polling rbm21 = new Rbm21Polling(sm.SerialPort); //se non va e si pianta? che fffamo?
             DBmanager dbm = new DBmanager(sm.SQLiteDB);
+            //DBmanager dbm = new DBmanager(@"C:\Users\paolo\Desktop\2018.sqlite");
 
             List<User> rbm21List = new List<User>();
             List<User> dbList = new List<User>();
             rbm21List = rbm21.ReadAllUsers();            
             dbList = dbm.GetActiveUsers();
             rbm21.Close();
+
+
+            //controllare:
+            //0700044327  50
+            //0600F0B731   41
+
 
             /* Since we are syncing with rbm21, we are only dealing with active users. Active users can be identified
              * with ONLY their key (UserCode is superflous). 
@@ -173,22 +182,44 @@ namespace RBM21_core
             
             foreach (string key in rbm21Users.Keys)
             {
+                /*   DateTime rbm21Time = rbm21Users[key].Time; //from rbm1 acquired data
+                   DateTime dbTime;                           //from local database
+
+                   //get last entrance memorized in sqlite database        THOSE LINES CAN BE BETTER
+                   int numEnt = (dbUsers[key].Entrances ==null)? 0 : dbUsers[key].Entrances.Count; //number of entrances of current user
+                   if (numEnt >= 1)
+                       dbTime = DateTime.Parse(dbUsers[key].Entrances[0]); //most recent entrance.
+                   else //if entrance's table doesn't contain anything about that user, create a fake old data, older than rbm21Time.
+                       dbTime = new DateTime(1980, 1,1);
+
+                   int result = DateTime.Compare(dbTime, rbm21Time);
+                   if (result >= 0) //if sqlite date is more recent than rbm21's, do nothing.
+                       continue;
+
+                   int result1 = DateTime.Compare(dbUsers[key].DataInserimento, dbTime);
+                   if (result1 > 0)
+                       continue;
+                   //else we have to upgrade "Entrances" table.
+                   int r1 = dbm.AddEntrance(dbUsers[key], rbm21Users[key].Time);
+                   //int a = dbm.updateUser(dbUsers[key].Position, dbUsers[key].Nome, dbUsers[key].Key, rbm21Users[key].CreditoResiduo, dbUsers[key].UserCode, true);
+                   LogLabel.Text += "Aggiunto ingresso: \"" + dbUsers[key].UserCode + "\" Time:" + rbm21Time.ToString() + "\r\n";
+                   */
                 DateTime rbm21Time = rbm21Users[key].Time; //from rbm1 acquired data
                 DateTime dbTime;                           //from local database
 
                 //get last entrance memorized in sqlite database        THOSE LINES CAN BE BETTER
-                int numEnt = (dbUsers[key].Entrances ==null)? 0 : dbUsers[key].Entrances.Count; //number of entrances of current user
+                int numEnt = (dbUsers[key].Entrances == null) ? 0 : dbUsers[key].Entrances.Count; //number of entrances of current user
                 if (numEnt >= 1)
                     dbTime = DateTime.Parse(dbUsers[key].Entrances[0]); //most recent entrance.
                 else //if entrance's table doesn't contain anything about that user, create a fake old data, older than rbm21Time.
-                    dbTime = new DateTime(1980, 1,1);
-                
-                int result = DateTime.Compare(dbTime, rbm21Time);
-                if (result >= 0) //if sqlite date is more recent than rbm21's, do nothing.
+                    dbTime = new DateTime(1980, 1, 1);
+
+                int result = DateTime.Compare(dbUsers[key].DataInserimento, rbm21Time);
+                if (result > 0) //if sqlite date is more recent than rbm21's, do nothing.
                     continue;
 
-                int result1 = DateTime.Compare(dbUsers[key].DataInserimento, dbTime);
-                if (result1 > 0)
+                int result1 = DateTime.Compare(dbTime, rbm21Time);
+                if (result1 >= 0)
                     continue;
                 //else we have to upgrade "Entrances" table.
                 int r1 = dbm.AddEntrance(dbUsers[key], rbm21Users[key].Time);
