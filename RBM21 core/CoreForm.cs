@@ -44,7 +44,7 @@ namespace RBM21_core
             SyncUsersTable2();
 
             //sync RBM21 (external unit) with local sqlite database (only if specified by cmd line option)
-            if (args.Length >= 2 && args[1] == "hardwaresync")
+            if (args.Length >= 2 && args[1] == "syncentrances")
                   HardwareSync();
 
               LogLabel.Text += "\r\n - OPERATIONS COMPLETED -";

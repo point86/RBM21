@@ -50,7 +50,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>kpBllsdCXCizC5wTGHHWz4JTq5hYTK50vvLv81WWY1Q=</dsig:DigestValue>
+        <dsig:DigestValue>x4fQl3AuZ8igVjduXlMXpUlrg8gD3zH0NhaarWzz60U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,15 +66,6 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="keySinc.ico" size="42597">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>7MVIaWq0DtmbTNplP/Wrvn2FkzUd2Bh2zQP2tIk41Rs=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="sync.ico" size="67646">
     <hash>
       <dsig:Transforms>

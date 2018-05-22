@@ -155,7 +155,6 @@
             this.label2.Size = new System.Drawing.Size(481, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "ATTENZIONE! La sincronizzazione automatica dei dati è disabilitata.";
-            this.label2.Visible = false;
             // 
             // button1
             // 

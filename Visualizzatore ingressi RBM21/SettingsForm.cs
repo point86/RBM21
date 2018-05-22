@@ -166,10 +166,9 @@ namespace Visualizzatore_ingressi_RBM21
             //calling schtasks with appropriate cmd options
             string RBM21CorePath = AppDomain.CurrentDomain.BaseDirectory + "RBM21 core.exe";
             /* Cmd line:
-             * Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc DAILY  /st 12:00:00 /f
-               Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc DAILY  /st 12:00:00 /RL HIGHEST /f
+               Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' syncentrances"  /sc DAILY  /st 12:00:00 /RL HIGHEST /f
             */
-            string strArguments = " /Create /tn RBM21Sync /tr \"'" + RBM21CorePath + "' hardwaresync\"  /sc DAILY  /st 12:00:00  /RL HIGHEST /f";
+            string strArguments = " /Create /tn RBM21Sync /tr \"'" + RBM21CorePath + "' syncentrances\"  /sc DAILY  /st 12:00:00  /RL HIGHEST /f";
             Process p = new Process();
             p.StartInfo.FileName = "schtasks";
             p.StartInfo.Arguments = strArguments;    
@@ -177,7 +176,16 @@ namespace Visualizzatore_ingressi_RBM21
             p.WaitForExit();
             /* on startup cmd will be:
              *  Schtasks /Create /tn RBM21Sync /tr "'C:\Users\paolo\Desktop\RBM21\RBM21 core\bin\Debug\RBM21 Core.exe' hardwaresync"  /sc ONSTART   /f
-             */            
+             */
+             
+            /* 
+            
+            strArguments = " /Create /tn RBM21SyncUsers /tr \"" + RBM21CorePath + "\"  /sc DAILY  /st 12:00:00  /RL HIGHEST  /f";
+            p = new Process();
+            p.StartInfo.FileName = "schtasks";
+            p.StartInfo.Arguments = strArguments;
+            p.Start();
+            p.WaitForExit(); */
         }
 
         static void DisableSync()
@@ -192,6 +200,15 @@ namespace Visualizzatore_ingressi_RBM21
             p.Start();
 
             p.WaitForExit();
+/*
+            strArguments = " /Delete /tn RBM21SyncEntrances /f";
+            p = new Process();
+            p.StartInfo.FileName = @"schtasks";
+            p.StartInfo.Arguments = strArguments;
+            p.Start();
+
+            p.WaitForExit();*/
+
         }
              
         //open windows Tasck Scheduler, from control panel

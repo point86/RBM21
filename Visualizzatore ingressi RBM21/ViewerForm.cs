@@ -157,7 +157,7 @@ namespace Visualizzatore_ingressi_RBM21
             Process process = new Process();
             // Configure the process using the StartInfo properties.
             process.StartInfo.FileName = RBM21CorePath;
-            process.StartInfo.Arguments = "hardwaresync";
+            process.StartInfo.Arguments = "syncentrances";
             process.StartInfo.WindowStyle = ProcessWindowStyle.Normal;
 
             //this.Hide();

@@ -365,7 +365,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:RBM21 Sync"
         "ProductCode" = "8:{87B91F98-7BA0-444B-A7E9-BA792D35FC60}"
-        "PackageCode" = "8:{F0249427-89EB-4025-B724-49D0F9C5E684}"
+        "PackageCode" = "8:{49FE1410-099E-469E-AEF8-45C6C6D41BFE}"
         "UpgradeCode" = "8:{B3B62FA2-B9CE-4F58-B13F-1BF97C061A36}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -499,6 +499,20 @@
             "Icon" = "8:_2072DA8D730B4A679A9B86B676690122"
             "Feature" = "8:"
             }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_99D1B78F533146A486F7C34D9BF8E07D"
+            {
+            "Name" = "8:RBM21 Core"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_06DFD8BC99F948E6A39C234CCD095E02"
+            "Folder" = "8:_4385CDF4A4F84AB78D061F52F2E4A734"
+            "WorkingFolder" = "8:_E6014401C5B4485D95172246EAD804D6"
+            "Icon" = "8:_DB24EBCD305345A5930B7D9887F43E45"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_BF684BE3866E4D2F89DA37244A5A4970"
             {
             "Name" = "8:Visualizzatore ingressi RBM21"
@@ -511,6 +525,20 @@
             "Folder" = "8:_4385CDF4A4F84AB78D061F52F2E4A734"
             "WorkingFolder" = "8:_E6014401C5B4485D95172246EAD804D6"
             "Icon" = "8:_2072DA8D730B4A679A9B86B676690122"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_C923F98A56B54B90AA91F050391AEC39"
+            {
+            "Name" = "8:Shortcut to Primary output from RBM21 core (Active)"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_06DFD8BC99F948E6A39C234CCD095E02"
+            "Folder" = "8:_6E37874D2D7646539795DF2320AE2098"
+            "WorkingFolder" = "8:_E6014401C5B4485D95172246EAD804D6"
+            "Icon" = "8:_DB24EBCD305345A5930B7D9887F43E45"
             "Feature" = "8:"
             }
         }
